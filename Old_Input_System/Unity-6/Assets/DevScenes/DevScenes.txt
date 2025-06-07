@@ -1,0 +1,7 @@
+Let's put dev/demo scenes here as this will make sense when docs are written for setup instructions for either the vehicle controller only usage and if then desired, the vehicle entry additions to such....
+
+ie:
+
+AllVehiclesDevScene-wEntry.unity   (to test/dev & continue on with all vehicles in one scene with entry)
+Jeep01DevScene.unity         (to test/dev & continue on with Jeep01 only in scene)
+Jeep01DevScene-wEntry.unity  (to test/dev & continue on with Jeep01 only in scene with entry)
