@@ -2,7 +2,7 @@
 Create basic Vehicle(s) Controller(s) by Example(s) for your Unity projects using vehicle models from Synty Polygon Explorers Asset. 
 
 
-Note: As this uses the vehicles from such and due to licensing of such asset the said vehicles cannot be included in this repository obviously, so, as such the provided scripts and instructions thus require having / purchasing the Synty Polygon Explorers Asset:  https://assetstore.unity.com/packages/3d/characters/humanoids/humans/polygon-explorer-low-poly-3d-art-by-synty-128996
+Note: As this uses the vehicles from such and due to licensing of such asset the said vehicles cannot be included in this repository obviously, so, as such the provided scripts thus require having / purchasing the Synty Polygon Explorers Asset:  https://assetstore.unity.com/packages/3d/characters/humanoids/humans/polygon-explorer-low-poly-3d-art-by-synty-128996
 
 
 ![Preview](https://raw.githubusercontent.com/deathwatchgaming/Unity-BasicVehiclesControl_ForSyntyExplorer/refs/heads/main/Previews/Asset/SyntyPolygonExplorers.png)
@@ -18,7 +18,7 @@ The intention of these releases due to only being scripts for usage with models 
 NOTE: This project was / is being developed while / for using Unity 2021+ & 2022+ & Unity 6
 
 
-ON THE NO DOCUMENTATIONS PRESENT NOTE: Currently as this is still being worked on / in dev, there are no documentations provided as of yet though upon completion of adding others vehicles ie: 1-4 jeeps for each variant and then getting around to the tedious task of writing various docs for each such will then be added, so for now if you are familiar with other similar repos of mine then you might already know how to set these up, if not and noting that there is no documentations currently provided nor created, one without such previous knowledges should probably not attempt to setup up the currently in progress repository
+ON THE NO DOCUMENTATIONS PRESENT NOTE: Currently as this is still being worked on / in dev, there are no documentations provided as of yet though upon completion of adding others vehicles ie: 1-4 jeeps for each variant and then getting around to the tedious task of writing various docs for each such will then be added, so for now if you are familiar with other similar repos of mine then you might already know how to set these up, if not and noting that there is no documentations currently provided nor created, one without such previous knowledges should probably not attempt to setup the currently in progress repository files...
 
 
 Old_Input_System Directory NOTE:
