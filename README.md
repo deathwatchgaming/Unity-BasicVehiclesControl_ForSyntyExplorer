@@ -31,9 +31,6 @@ The intention of these releases due to only being scripts for usage with models 
 NOTE: This project was / is being developed while / for using Unity 2021+ & 2022+ & Unity 6+
 
 
-ON THE NO DOCUMENTATIONS PRESENT NOTE: Currently as this is still being worked on / in dev, there are no documentations provided as of yet though upon completion of adding others vehicles ie: 1-4 jeeps for each variant and then getting around to the tedious task of writing various docs for each such will then be added, so for now if you are familiar with other similar repos of mine then you might already know how to set these up, if not and noting that there is no documentations currently provided nor created, one without such previous knowledges should probably not attempt to setup the currently in progress repository files...
-
-
 Old_Input_System Directory NOTE:
 
 Provided variants: (Unity 2021+ / 2022+ variant & Unity 6+ variant)
