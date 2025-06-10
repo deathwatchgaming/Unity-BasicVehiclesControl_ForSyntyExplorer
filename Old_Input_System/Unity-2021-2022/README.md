@@ -166,35 +166,35 @@ INDIVIDUAL VEHICLES WITH ENTRY USAGE:
 
 Jeep 01 "Controller With Player Entry" usage:
 
-* Jeep 01 controller with entry in scene setup: coming soon...
+* Jeep 01 controller with entry in scene setup: https://github.com/deathwatchgaming/Unity-BasicVehiclesControl_ForSyntyExplorer/blob/main/Old_Input_System/Unity-2021-2022/Assets/VehiclesControl/Jeep/Jeep01/Documentation/Jeep01Controller-wEntry-Documentation.txt
 
-* Jeep 01 controller with entry in scene speedometer setup: coming soon...
+* Jeep 01 controller with entry in scene speedometer setup: https://github.com/deathwatchgaming/Unity-BasicVehiclesControl_ForSyntyExplorer/blob/main/Old_Input_System/Unity-2021-2022/Assets/VehiclesControl/Jeep/Jeep01/Documentation/Jeep01Controller-Speedometer-Documentation.txt
 
-* Jeep 01 controller with entry in scene player and vehicle compass setup: coming soon...
+* Jeep 01 controller with entry in scene player and vehicle compass setup: https://github.com/deathwatchgaming/Unity-BasicVehiclesControl_ForSyntyExplorer/blob/main/Old_Input_System/Unity-2021-2022/Assets/NavigationControl/Compass/Scripts/Jeep/Documentation/Jeep01-Individual-Compass-Documentation.txt
 
 
 Jeep 02 "Controller With Player Entry" usage:
 
-* Jeep 02 controller with entry in scene setup: coming soon...
+* Jeep 02 controller with entry in scene setup: https://github.com/deathwatchgaming/Unity-BasicVehiclesControl_ForSyntyExplorer/blob/main/Old_Input_System/Unity-2021-2022/Assets/VehiclesControl/Jeep/Jeep02/Documentation/Jeep02Controller-wEntry-Documentation.txt
 
-* Jeep 02 controller with entry in scene speedometer setup: coming soon...
+* Jeep 02 controller with entry in scene speedometer setup: https://github.com/deathwatchgaming/Unity-BasicVehiclesControl_ForSyntyExplorer/blob/main/Old_Input_System/Unity-2021-2022/Assets/VehiclesControl/Jeep/Jeep02/Documentation/Jeep02Controller-Speedometer-Documentation.txt
 
-* Jeep 02 controller with entry in scene player and vehicle compass setup: coming soon...
+* Jeep 02 controller with entry in scene player and vehicle compass setup: https://github.com/deathwatchgaming/Unity-BasicVehiclesControl_ForSyntyExplorer/blob/main/Old_Input_System/Unity-2021-2022/Assets/NavigationControl/Compass/Scripts/Jeep/Documentation/Jeep02-Individual-Compass-Documentation.txt
 
 
 Jeep 03 "Controller With Player Entry" usage:
 
-* Jeep 03 controller with entry in scene setup: coming soon...
+* Jeep 03 controller with entry in scene setup: https://github.com/deathwatchgaming/Unity-BasicVehiclesControl_ForSyntyExplorer/blob/main/Old_Input_System/Unity-2021-2022/Assets/VehiclesControl/Jeep/Jeep03/Documentation/Jeep03Controller-wEntry-Documentation.txt
 
-* Jeep 03 controller with entry in scene speedometer setup: coming soon...
+* Jeep 03 controller with entry in scene speedometer setup: https://github.com/deathwatchgaming/Unity-BasicVehiclesControl_ForSyntyExplorer/blob/main/Old_Input_System/Unity-2021-2022/Assets/VehiclesControl/Jeep/Jeep03/Documentation/Jeep03Controller-Speedometer-Documentation.txt
 
-* Jeep 03 controller with entry in scene player and vehicle compass setup: coming soon...
+* Jeep 03 controller with entry in scene player and vehicle compass setup: https://github.com/deathwatchgaming/Unity-BasicVehiclesControl_ForSyntyExplorer/blob/main/Old_Input_System/Unity-2021-2022/Assets/NavigationControl/Compass/Scripts/Jeep/Documentation/Jeep03-Individual-Compass-Documentation.txt
 
 
 Jeep 04 "Controller With Player Entry" usage:
 
-* Jeep 04 controller with entry in scene setup: coming soon...
+* Jeep 04 controller with entry in scene setup: https://github.com/deathwatchgaming/Unity-BasicVehiclesControl_ForSyntyExplorer/blob/main/Old_Input_System/Unity-2021-2022/Assets/VehiclesControl/Jeep/Jeep04/Documentation/Jeep04Controller-wEntry-Documentation.txt
 
-* Jeep 04 controller with entry in scene speedometer setup: coming soon...
+* Jeep 04 controller with entry in scene speedometer setup: https://github.com/deathwatchgaming/Unity-BasicVehiclesControl_ForSyntyExplorer/blob/main/Old_Input_System/Unity-2021-2022/Assets/VehiclesControl/Jeep/Jeep04/Documentation/Jeep04Controller-Speedometer-Documentation.txt
 
-* Jeep 04 controller with entry in scene player and vehicle compass setup: coming soon...
+* Jeep 04 controller with entry in scene player and vehicle compass setup: https://github.com/deathwatchgaming/Unity-BasicVehiclesControl_ForSyntyExplorer/blob/main/Old_Input_System/Unity-2021-2022/Assets/NavigationControl/Compass/Scripts/Jeep/Documentation/Jeep04-Individual-Compass-Documentation.txt
