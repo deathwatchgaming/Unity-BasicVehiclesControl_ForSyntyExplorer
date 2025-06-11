@@ -114,7 +114,7 @@ Vehicles Control:
 -----------------
 
 
-* All vehicles with entry in scene setup: https://github.com/deathwatchgaming/Unity-BasicVehiclesControl_ForSyntyExplorer/blob/main/Old_Input_System/Unity-6/Assets/VehiclesControl/Documentation/AllVehicleControllers-wEntry-Documentation.txt
+* All vehicles with entry in scene setup: https://github.com/deathwatchgaming/Unity-BasicVehiclesControl_ForSyntyExplorer/blob/main/Old_Input_System/Unity-6/Assets/VehiclesControl/Jeep/Documentation/AllVehicleControllers-wEntry-Documentation.txt
 
 
 Jeep: (total: 4)
