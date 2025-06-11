@@ -71,7 +71,7 @@ Other Current "In Progress" & Not Yet Included:
 -----------------------------------------------
 
 
-* Related Documentations ie: AllVehicleControllers-wEntry-Documentation (in progress)
+* ...
 
 
 Player Controls: 
@@ -129,7 +129,7 @@ Vehicles Control:
 -----------------
 
 
-* All vehicles with entry in scene setup: coming soon...
+* All vehicles with entry in scene setup: https://github.com/deathwatchgaming/Unity-BasicVehiclesControl_ForSyntyExplorer/blob/main/New_Input_System/Unity-2021-2022/Assets/VehiclesControl/Jeep/Documentation/AllVehicleControllers-wEntry-Documentation.txt
 
 
 

@@ -1,0 +1,5615 @@
+"AllVehiclesDevScene-wEntry" Scene Setup Steps
+-----------------------------------------------------------------------------------
+
+Description:
+
+Create a basic All Vehicle Controller(s) with entry in scene for your Unity
+projects using vehicle models from Synty Polygon Explorer Asset.
+
+
+Player Controls:
+----------------
+
+Player Forward:   W [Keyboard] / Left Stick [Gamepad]
+Player Reverse:   S [Keyboard] / Left Stick [Gamepad]
+Player Left:      A [Keyboard] / Left Stick [Gamepad]
+Player Right:     D [Keyboard] / Left Stick [Gamepad]
+Player Jump:      Space [Keyboard] / Button South [Gamepad] 
+Player Sprint:    Shift [Keyboard] / Left Shoulder [Gamepad]
+Player Look:      Delta [Mouse] / Right Stick [Gamepad]
+
+
+Vehicle Controls: 
+-----------------
+
+Vehicle Forward:   W [Keyboard] / Left Stick [Gamepad]
+Vehicle Reverse:   S [Keyboard] / Left Stick [Gamepad]
+Vehicle Left:      A [Keyboard] / Left Stick [Gamepad]
+Vehicle Right:     D [Keyboard] / Left Stick [Gamepad]
+Vehicle Brake:     Space [Keyboard] / Right Trigger [Gamepad]
+Enter Vehicle:     E [Keyboard] / Button North [Gamepad] 
+Exit Vehicle:      F [Keyboard] / Button South [Gamepad]
+
+
+Manual Setup Instruction:
+-------------------------
+
+
+* Simply follow the instruction for manual setup found below.
+
+
+-----------------------------------------------------------------------------------
+
+Prep Step: Create New Scene Called: "AllVehiclesDevScene-wEntry"
+
+Note: if you already have some sort of a test terrain in place, well then, you
+can simple skip the steps: #1, 2 & 3 and go directly to #4.
+
+-----------------------------------------------------------------------------------
+
+Step 1: Create: "Environment" * (for Nicer Organization)
+
+-----------------------------------------------------------------------------------
+
+
+Create Empty: "Environment"
+
+Position: X: 0 Y: 0 Z: 0 
+Rotation: X: 0 Y: 0 Z: 0 
+Scale:    X: 1 Y: 1 Z: 1
+
+First since this is just a "holder" added for better organization, let us go
+ahead & drag the "Directional Light" into "Environment".
+
+* also if you wanted you could add a "dir" called Environment and opt to place
+  your TerrainData inside that in its own Dir "TerrainData" and as such any
+  other Environment stuff respectively in as desired the "Environment" dir.
+  Just a suggestion.
+
+Also: We don't need the "Main Camera" in Sample Scene, so..., we can go ahead
+and delete it.
+
+
+-----------------------------------------------------------------------------------
+
+Step 2: Create: "Terrain Plane"
+
+-----------------------------------------------------------------------------------
+
+
+Create New 3D Object: "Plane"
+
+Position: X: 0   Y: -0.03 Z: 0 
+Rotation: X: 0   Y: 0     Z: 0 
+Scale:    X: 800 Y: 1     Z: 800
+
+Rename to: "Terrain Plane"
+
+We can now opt to clean up for better organization, simply drag the:
+"Terrain Plane" into the holder "Environment" we added for just this exact
+ purpose!
+
+
+-----------------------------------------------------------------------------------
+
+Step 3: Create: "Terrain"
+
+-----------------------------------------------------------------------------------
+
+
+Create New 3D Object: "Terrain"
+
+Modify via:
+
+"Terrain" Inspector: Terrain Settings
+
+Mesh Resolution:
+
+Terrain Width: 8000
+Terrain Length: 8000
+
+Modify via:
+
+"Terrain" Inspector: "Transform"
+
+Position: X: -4000 Y: 0 Z: -4000 
+Rotation: X: 0     Y: 0 Z: 0 
+Scale:    X: 1     Y: 1 Z: 1
+
+We can now opt to clean up for better organization, simply drag the:
+"Terrain" into the holder "Environment" we added for just this exact purpose!
+
+
+-----------------------------------------------------------------------------------
+
+Step 4: Create: empty "Vehicles"
+
+-----------------------------------------------------------------------------------
+
+
+Create Empty: "Vehicles"
+
+Position: X: 0 Y: 0 Z: 0 
+Rotation: X: 0 Y: 0 Z: 0 
+Scale:    X: 1 Y: 1 Z: 1
+
+
+-----------------------------------------------------------------------------------
+
+Notes: Current Summary
+
+-----------------------------------------------------------------------------------
+
+
+Note: Ok, by now your scene heirarchy at top should look like this:
+
+Environment
+Vehicles
+
+
+Nice and organized right?! :) Good Stuff! ;)
+
+Note: as this uses a vehicle from such and due to licensing such vehicles
+cannot be included in this repository obviously, as such the provided scripts
+and instructions thus require having / purchasing the:
+
+Synty Polygon Explorer Asset:
+
+https://assetstore.unity.com/packages/3d/characters/humanoids/humans/polygon-explorer-low-poly-3d-art-by-synty-128996
+
+
+-----------------------------------------------------------------------------------
+
+Step 5: Install: "Synty Polygon Heist Asset"
+
+-----------------------------------------------------------------------------------
+
+
+Depending on how you purchased you can either use the package manager to
+install the asset or if you are like me and say already have local repository
+storage of purchased assets and have the package already you can install the
+asset manually.
+
+Asset package to install:
+
+ POLYGON Explorer - Low Poly 3D Art by Synty.unitypackage
+
+Purchase Synty Polygon Explorer Asset:
+
+https://assetstore.unity.com/packages/3d/characters/humanoids/humans/polygon-explorer-low-poly-3d-art-by-synty-128996
+
+
+-----------------------------------------------------------------------------------
+
+Step 6: Identify: the "Vehicle Prefab"
+
+-----------------------------------------------------------------------------------
+
+
+Let us first identify and locate the "Vehicle Prefab" we are going to use.
+
+Assets > PolygonExplorers > Prefabs > Vehicles
+
+SM_Veh_4x4_Car_01
+
+
+-----------------------------------------------------------------------------------
+
+Step 7: Add: the "Vehicle Prefab" to Scene
+
+-----------------------------------------------------------------------------------
+
+
+Drag the mentioned "Vehicle Prefab" into the scene & unpack the prefab completely.
+
+Next, rename the vehicle prefabs:
+
+SM_Veh_4x4_Car_01 => "Jeep01"
+
+Next, set the Transform:
+
+Position: X: -9 Y: 0 Z: 0 
+Rotation: X: 0 Y: 0 Z: 0 
+Scale:    X: 1 Y: 1 Z: 1
+
+Material: PolygonExplorers_01_A
+
+Then move "Jeep01" into the empty: "Vehicles" as child of.
+
+
+-----------------------------------------------------------------------------------
+
+Step 8: Add: empty "View" as child
+
+-----------------------------------------------------------------------------------
+
+
+In "Jeep01" add empty as child named "View"
+
+Set the Transform of "View":
+
+Position: X: 0 Y: 0 Z: 0 
+Rotation: X: 0 Y: 0 Z: 0 
+Scale:    X: 1 Y: 1 Z: 1
+
+
+-----------------------------------------------------------------------------------
+
+Step 9: Add: "Camera" in empty "View" as child
+
+-----------------------------------------------------------------------------------
+
+
+In the empty: "View" add "Camera" component named: "Jeep01Camera"
+
+Tag: Untagged
+
+Depth: 0
+
+Set the Transform of "Jeep01Camera":
+
+Position: X: 0 Y: 1.64 Z: -6.4 
+Rotation: X: 0 Y: 0 Z: 0 
+Scale:    X: 1 Y: 1 Z: 1
+
+
+-----------------------------------------------------------------------------------
+
+Step 10: Add: empty "WheelMeshes" as child
+
+-----------------------------------------------------------------------------------
+
+
+In "Jeep01" add empty as child named "WheelMeshes"
+
+Set the Transform of "WheelMeshes":
+
+Position: X: 0 Y: 0 Z: 0 
+Rotation: X: 0 Y: 0 Z: 0 
+Scale:    X: 1 Y: 1 Z: 1
+
+Copy & paste the following meshes into "WheelMeshes" as children
+(delete originals after as they are not needed since we copied them into new
+location)
+
+SM_Veh_4x4_Car_Wheel_fl_01
+SM_Veh_4x4_Car_Wheel_fr_01
+SM_Veh_4x4_Car_Wheel_rl_01
+SM_Veh_4x4_Car_Wheel_rr_01
+
+Transforms should be fine and unaffected but, let us just mention them for
+good measure.
+
+SM_Veh_4x4_Car_Wheel_fl_01
+---------------------------
+
+Position: X: -0.8105161 Y: 0.4639312 Z: 1.305854
+Rotation: X: 0 Y: 0 Z: 0 
+Scale:    X: 1 Y: 1 Z: 1
+
+
+SM_Veh_4x4_Car_Wheel_fr_01
+---------------------------
+
+Position: X: 0.8105161 Y: 0.4639312 Z: 1.305854
+Rotation: X: 0 Y: 0 Z: 0 
+Scale:    X: 1 Y: 1 Z: 1
+
+
+SM_Veh_4x4_Car_Wheel_rl_01
+---------------------------
+
+Position: X: -0.9462859 Y: 0.4639312 Z: -1.2084
+Rotation: X: 0 Y: 0 Z: 0 
+Scale:    X: 1 Y: 1 Z: 1
+
+
+SM_Veh_4x4_Car_Wheel_rr_01
+---------------------------
+
+Position: X: 0.9462859 Y: 0.4639312 Z: -1.2084
+Rotation: X: 0 Y: 0 Z: 0 
+Scale:    X: 1 Y: 1 Z: 1
+
+
+-----------------------------------------------------------------------------------
+
+Step 11: Duplicate: empty "WheelMeshes" as "WheelColliders"
+
+-----------------------------------------------------------------------------------
+
+
+In "Jeep01" duplicate "WheelMeshes" & rename to "WheelColliders"
+
+Set the Transform of "WheelColliders":
+
+Position: X: 0 Y: 0 Z: 0 
+Rotation: X: 0 Y: 0 Z: 0 
+Scale:    X: 1 Y: 1 Z: 1
+
+
+Since you duplicated "WheelMeshes" & renamed to "WheelColliders" there should
+be the children already present with matching infos...
+
+SM_Veh_4x4_Car_Wheel_fl_01
+SM_Veh_4x4_Car_Wheel_fr_01
+SM_Veh_4x4_Car_Wheel_rl_01
+SM_Veh_4x4_Car_Wheel_rr_01
+
+
+Prior to the deletion of contents in WheelColliders if you desired to
+determine the wheel radius so as to eventually use with Wheel Colliders well,
+you could attach a Sphere Collider and gain Radius from that and then delete
+the sphere collider after as such would no longer be necessary but instead to
+avoid needing to do such I will provide that info so you do not necessarily
+need to do so.
+
+These details are important:
+
+
+Wheel Collider Radius: 0.4938253
+Wheel Collider Position: Y: 0.6139312 (0.4639312+0.15) *
+
+* Wheel colliders need +0.15 on the Y to function as intended as per
+  documentation
+
+In "WheelColliders" children: * (since all are already present in WheelMeshes
+and not needed for Wheel Colliders)
+
+* Delete Mesh Filter
+* Delete Mesh Renderer
+
+Add Component "Wheel Collider" to each:
+
+SM_Veh_4x4_Car_Wheel_fl_01
+SM_Veh_4x4_Car_Wheel_fr_01
+SM_Veh_4x4_Car_Wheel_rl_01
+SM_Veh_4x4_Car_Wheel_rr_01
+
+Set both front "Wheel Colliders" radius: 0.4938253
+Set both rear  "Wheel Colliders" radius: 0.4938253
+
+
+We will need to now edit these infos:
+
+
+SM_Veh_4x4_Car_Wheel_fl_01
+---------------------------
+
+Position: X: -0.8105161 Y: 0.6139312 Z: 1.305854
+Rotation: X: 0 Y: 0 Z: 0 
+Scale:    X: 1 Y: 1 Z: 1
+
+
+SM_Veh_4x4_Car_Wheel_fr_01
+---------------------------
+
+Position: X: 0.8105161 Y: 0.6139312 Z: 1.305854
+Rotation: X: 0 Y: 0 Z: 0 
+Scale:    X: 1 Y: 1 Z: 1
+
+
+SM_Veh_4x4_Car_Wheel_rl_01
+---------------------------
+
+Position: X: -0.9462859 Y: 0.6139312 Z: -1.2084
+Rotation: X: 0 Y: 0 Z: 0 
+Scale:    X: 1 Y: 1 Z: 1
+
+
+SM_Veh_4x4_Car_Wheel_rr_01
+---------------------------
+
+Position: X: 0.9462859 Y: 0.6139312 Z: -1.2084
+Rotation: X: 0 Y: 0 Z: 0 
+Scale:    X: 1 Y: 1 Z: 1
+
+
+-----------------------------------------------------------------------------------
+
+Notes: Current Summary
+
+-----------------------------------------------------------------------------------
+
+
+Note: Ok, by now your vehicle heirarchy should look like this:
+
+Mostly Collapsed:
+
+Vehicles
+  Jeep01
+    SM_Veh_4x4_Car_Door_L_01
+    SM_Veh_4x4_Car_Door_R_01
+    SM_Veh_4x4_Car_Glass_01
+    SM_Veh_4x4_Car_Rear_Door_01
+    SM_Veh_4x4_Car_Rear_Seat_01
+    SM_Veh_4x4_Car_SteeringW_01
+    WheelMeshes
+    WheelColliders   
+    View
+
+Fully Expanded:
+
+Vehicles
+  Jeep01
+    SM_Veh_4x4_Car_Door_L_01
+    SM_Veh_4x4_Car_Door_R_01
+    SM_Veh_4x4_Car_Glass_01
+    SM_Veh_4x4_Car_Rear_Door_01
+    SM_Veh_4x4_Car_Rear_Seat_01
+    SM_Veh_4x4_Car_SteeringW_01
+    WheelMeshes
+      SM_Veh_4x4_Car_Wheel_fl_01
+      SM_Veh_4x4_Car_Wheel_fr_01
+      SM_Veh_4x4_Car_Wheel_rl_01
+      SM_Veh_4x4_Car_Wheel_rr_01    
+    WheelColliders
+      SM_Veh_4x4_Car_Wheel_fl_01
+      SM_Veh_4x4_Car_Wheel_fr_01
+      SM_Veh_4x4_Car_Wheel_rl_01
+      SM_Veh_4x4_Car_Wheel_rr_01   
+    View
+      Jeep01Camera
+
+
+-----------------------------------------------------------------------------------
+
+Step 12: Add to: Jeep01 (Jeep01Controller.cs)
+
+-----------------------------------------------------------------------------------
+
+
+Attach component / script (Jeep01Controller.cs) to "Jeep01"
+
+Adjust the following settings:
+
+Require Components:
+-------------------
+
+Rigidbody: Jeep01 (Rigidbody)
+Mesh Collider: Jeep01 (Mesh Collider)
+
+Wheel Transforms:
+-----------------
+
+Front Left: SM_Veh_4x4_Car_Wheel_fl_01 (Transform)
+Front Right: SM_Veh_4x4_Car_Wheel_fr_01 (Transform)
+Rear Left: SM_Veh_4x4_Car_Wheel_rl_01 (Transform)
+Rear Right: SM_Veh_4x4_Car_Wheel_rr_01 (Transform)
+
+WheelColliders:
+---------------
+
+Front Left: SM_Veh_4x4_Car_Wheel_fl_01 (Wheel Collider)
+Front Right: SM_Veh_4x4_Car_Wheel_fr_01 (Wheel Collider)
+Rear Left: SM_Veh_4x4_Car_Wheel_rl_01 (Wheel Collider)
+Rear Right: SM_Veh_4x4_Car_Wheel_rr_01 (Wheel Collider)
+
+Rigidbody Mass:
+---------------
+
+Set Rigibody Mass: 2000
+
+
+Input Actions:
+--------------
+
+Car Controls: CarControls (Input Action Asset)
+
+
+-----------------------------------------------------------------------------------
+
+Step 13: Add to: Jeep01Camera (Jeep01Camera.cs)
+
+-----------------------------------------------------------------------------------
+
+
+Attach component / script (Jeep01Camera.cs) to "Jeep01Camera"
+
+
+Adjust Settings:
+
+Transforms:
+-----------
+
+Jeep01: Jeep01 (Transform)
+
+
+Distance: 6.4
+Height: 1.4
+
+
+You can keep settings as is or tweak them to your likings! *
+
+* ie: (tweak camera distance)
+* ie: (tweak camera height)
+
+Distance: 6.8
+Height: 2.2
+
+
+Note: You will find that later if you are opting to say add the compass, being
+able to adjust / tweak the distance and height of camera becomes very
+useful!
+
+
+-----------------------------------------------------------------------------------
+
+Step 14: Create: empty "Interface"
+
+-----------------------------------------------------------------------------------
+
+
+Create an empty called: "Interface"
+
+Layer: "UI"
+
+Transform: 
+----------
+
+Position: X: 0 Y: 0   Z: 0 
+Rotation: X: 0 Y: 0   Z: 0 
+Scale:    X: 1 Y: 1   Z: 1 
+
+
+-----------------------------------------------------------------------------------
+
+Step 15: In "Interface" Add UI: "Canvas"
+
+-----------------------------------------------------------------------------------
+
+
+Create as a child of "Interface" Add a UI: "Canvas"
+
+
+-----------------------------------------------------------------------------------
+
+Step 16: Create as child of "Canvas" add empty: "VehiclesEntry"
+
+-----------------------------------------------------------------------------------
+
+
+Create as a child of "Interface" add empty: "VehiclesEntry"
+
+Layer: "UI"
+
+
+Rect Transform: 
+---------------
+
+Set at "Bottom Center"
+
+Position: X: 0 Y: 50   Z: 0 
+Width: 100
+Height: 100
+
+
+-----------------------------------------------------------------------------------
+
+Step 17:  Create child of "VehiclesEntry" add Text tmp: "Jeep01_EntryKey"
+
+-----------------------------------------------------------------------------------
+
+
+Create as a child of "VehiclesEntry" add TextMeshPro Text: "Jeep01_EntryKey"
+
+Layer: "UI"
+
+
+Rect Transform: 
+---------------
+
+Set at "Top Center"
+
+Position: X: 0 Y: -50   Z: 0 
+Width: 100
+Height: 100
+
+
+Text Input: Drive [E]
+
+Font Size: 36
+
+Alignment: Center & Middle
+
+Face:
+-----
+Dilate: 0.21
+
+Outline: Yes Thickness: 0.121
+
+Underlay: Yes Softness: 0.522
+
+Note: The face, outline and underlay are merely starting suggestions that you
+can tweak further to your desired likings as well as any other related
+settings of the likes.
+
+Note: Lastly, disable this object as we do not want this to display prior to
+awake or start methods and to do this we will disable this object by default
+and then there is a wrapper in the script that will find the inactive item in
+start thus doing what will be needed. So yeah, make sure to disable this
+object in the editor.
+
+Ok, now that this part is done we can start moving to other setup steps...
+
+
+-----------------------------------------------------------------------------------
+
+Notes: Current Summary
+
+-----------------------------------------------------------------------------------
+
+
+Note: Ok, by now your vehicle heirarchy should look like this:
+
+Mostly Collapsed:
+
+Vehicle
+  Jeep01
+    SM_Veh_4x4_Car_Door_L_01
+    SM_Veh_4x4_Car_Door_R_01
+    SM_Veh_4x4_Car_Glass_01
+    SM_Veh_4x4_Car_Rear_Door_01
+    SM_Veh_4x4_Car_Rear_Seat_01
+    SM_Veh_4x4_Car_SteeringW_01
+    WheelMeshes
+    WheelColliders   
+    View
+Interface
+  Canvas
+    VehiclesEntry
+EventSystem
+
+Fully Expanded:
+
+Vehicle
+  Jeep01
+    SM_Veh_4x4_Car_Door_L_01
+    SM_Veh_4x4_Car_Door_R_01
+    SM_Veh_4x4_Car_Glass_01
+    SM_Veh_4x4_Car_Rear_Door_01
+    SM_Veh_4x4_Car_Rear_Seat_01
+    SM_Veh_4x4_Car_SteeringW_01
+    WheelMeshes
+      SM_Veh_4x4_Car_Wheel_fl_01
+      SM_Veh_4x4_Car_Wheel_fr_01
+      SM_Veh_4x4_Car_Wheel_rl_01
+      SM_Veh_4x4_Car_Wheel_rr_01    
+    WheelColliders
+      SM_Veh_4x4_Car_Wheel_fl_01
+      SM_Veh_4x4_Car_Wheel_fr_01
+      SM_Veh_4x4_Car_Wheel_rl_01
+      SM_Veh_4x4_Car_Wheel_rr_01   
+    View
+      Jeep01Camera
+Interface
+  Canvas
+    VehiclesEntry
+      Jeep01_EntryKey
+EventSystem
+
+
+-----------------------------------------------------------------------------------
+
+Step 18: Create: object "Player":
+
+-----------------------------------------------------------------------------------
+
+
+Create empty object and name such: "Player"
+
+Transform: 
+----------
+
+Position: X: 0 Y: 0.9799998 Z: -15
+Rotation: X: 0 Y: 0  Z: 0 
+Scale:    X: 1 Y: 1  Z: 1
+
+Add Tag: "Player"
+
+
+-----------------------------------------------------------------------------------
+
+Step 19: Add: empty object "View":
+
+-----------------------------------------------------------------------------------
+
+
+In "Player" object, create a child of the "Player" object and name
+such: "View"
+
+Transform Position: X: 0 Y: 0 Z: 0
+
+
+-----------------------------------------------------------------------------------
+
+Step 20: Add: "Camera":
+
+-----------------------------------------------------------------------------------
+
+
+In "Player" object, add a Camera component as child of "View" and name
+such: "Camera"
+
+Transform: 
+----------
+
+Position: X: 0 Y: 0.6 Z: 0 
+Rotation: X: 0 Y: 0   Z: 0 
+Scale:    X: 1 Y: 1   Z: 1
+
+Depth: "1" 
+
+Add Tag: "MainCamera"
+
+
+-----------------------------------------------------------------------------------
+
+Step 21: Add Component: "First Person Controller (Script)"
+
+-----------------------------------------------------------------------------------
+
+
+Add: "FirstPersonController.cs" script to object: "Player"
+
+
+Input Actions:
+--------------
+
+Player Controls: PlayerControls (Input Action Asset)
+
+
+-----------------------------------------------------------------------------------
+
+Step 22: Edit: the "CharacterController" component:
+
+-----------------------------------------------------------------------------------
+
+
+In "Player" object, edit the "CharacterController" component:
+
+Height: "1.8"
+
+
+-----------------------------------------------------------------------------------
+
+Step 23: Setup: Audio Source and Footstep Sounds Audio Clips:
+
+-----------------------------------------------------------------------------------
+
+
+In "Player" object edit: the "First Person Controller (Script)"
+
+Footstep Source: Player (AudioSource)
+
+Footstep Sounds: "4"
+
+Element 0: "Footstep01"
+Element 1: "Footstep02"
+Element 2: "Footstep03"
+Element 3: "Footstep04"
+
+
+-----------------------------------------------------------------------------------
+
+Notes: Current Summary
+
+-----------------------------------------------------------------------------------
+
+
+Note: Ok, by now your heirarchy should look like this:
+
+Mostly Collapsed:
+
+
+Environment
+  Directional Light
+  Terrain
+  Terrain Plane
+Player
+  View
+    Camera
+Vehicle
+  Jeep01
+    SM_Veh_4x4_Car_Door_L_01
+    SM_Veh_4x4_Car_Door_R_01
+    SM_Veh_4x4_Car_Glass_01
+    SM_Veh_4x4_Car_Rear_Door_01
+    SM_Veh_4x4_Car_Rear_Seat_01
+    SM_Veh_4x4_Car_SteeringW_01
+    WheelMeshes
+    WheelColliders   
+    View
+Interface
+  Canvas
+    VehiclesEntry
+EventSystem
+
+Fully Expanded:
+
+Environment
+  Directional Light
+  Terrain
+  Terrain Plane
+Player
+  View
+    Camera
+Vehicles
+  Jeep01
+    SM_Veh_4x4_Car_Door_L_01
+    SM_Veh_4x4_Car_Door_R_01
+    SM_Veh_4x4_Car_Glass_01
+    SM_Veh_4x4_Car_Rear_Door_01
+    SM_Veh_4x4_Car_Rear_Seat_01
+    SM_Veh_4x4_Car_SteeringW_01
+    WheelMeshes
+      SM_Veh_4x4_Car_Wheel_fl_01
+      SM_Veh_4x4_Car_Wheel_fr_01
+      SM_Veh_4x4_Car_Wheel_rl_01
+      SM_Veh_4x4_Car_Wheel_rr_01    
+    WheelColliders
+      SM_Veh_4x4_Car_Wheel_fl_01
+      SM_Veh_4x4_Car_Wheel_fr_01
+      SM_Veh_4x4_Car_Wheel_rl_01
+      SM_Veh_4x4_Car_Wheel_rr_01   
+    View
+      Jeep01Camera
+Interface
+  Canvas
+    VehiclesEntry
+      Jeep01_EntryKey
+EventSystem
+
+
+-----------------------------------------------------------------------------------
+
+Step 24: Add to: Jeep01 (Jeep01Entry.cs)
+
+-----------------------------------------------------------------------------------
+
+
+Attach component / script (Jeep01Entry.cs) to "Jeep01"
+
+Adjust the following settings:
+
+
+Game Objects:
+-------------
+
+Jeep01: Jeep01
+Player: Player
+InterfaceText Object: Jeep01_EntryKey
+
+
+In Box Collider:
+----------------
+
+Is Trigger: Yes
+
+Edit Collider: YES!* 
+
+* Edit the collider to be around the vehicle doors makings sure to extend the
+  collider a good bit out away from doors so as to allow for a good trigger
+  zone. Here is just an example that I suggest you tweak further to your
+  likings and needs:
+
+Center: X: 0.05843675 Y: 1.107235 Z: -0.05913931
+Size: X: 3.934733 Y: 1.711891 Z: 0.9941341
+
+Input Actions:
+--------------
+
+Car Controls: CarControls (Input Action Asset)
+
+
+-----------------------------------------------------------------------------------
+
+Step 25: In Interface > Canvas create empty child: "VehiclesSpeed"
+
+-----------------------------------------------------------------------------------
+
+
+In: "VehiclesSpeed"
+
+Adjust:
+
+Rect Transform:
+---------------
+
+Bottom Left
+
+Pos X: 146.3
+Pos Y: 143
+
+Width: 300
+Height: 300
+
+
+-----------------------------------------------------------------------------------
+
+Step 26: In "VehiclesSpeed" create empty child: "Jeep01Speedometer"
+
+-----------------------------------------------------------------------------------
+
+
+In "Jeep01Speedometer"
+
+Adjust:
+
+Rect Transform:
+---------------
+
+Middle Center
+
+Width: 300
+Height: 300
+
+* something to note on placement: ok, when you add the script later in steps
+  you will notice an option in script settings for setting on choice of
+  either kph or mph in regards to SpeedText output, ok, with taking that into
+  account you can now possibly understand the following note about placement
+  of the interface items specific to such, mkay lets say that these setup
+  steps suggest setting all on the bottom left and that is because we are
+  using mph for the speed text output display thus such would make sense to
+  have speedometer and speed text on left bottom, but, ok, say you select kph
+  as speed text output, then it just might make sence to set the interface
+  items to the bottom right and that is why these suggestions are mentioned.
+  The choice is yours on that.
+
+
+-----------------------------------------------------------------------------------
+
+Step 27: In Interface > Canvas > VehiclesSpeed add UI IMG: "Jeep01_SpeedoGuage"
+
+-----------------------------------------------------------------------------------
+
+
+In: "Jeep01_SpeedoGuage"
+
+Adjust:
+
+Rect Transform:
+---------------
+
+Middle Center
+
+Width: 300
+Height: 300
+
+
+In: "Image"
+
+
+Source Image: Speedometer-Guage
+
+Color: (Suggested Hex) FFFFFF
+
+
+Note: Lastly, disable this object as we do not want this to display prior to
+awake or start methods and to do this we will disable this object by default
+and then there is a wrapper in the script that will find the inactive item in
+start thus doing what will be needed. So yeah, make sure to disable this
+object in the editor.
+
+
+-----------------------------------------------------------------------------------
+
+Step 28: In Interface > Canvas > VehiclesSpeed add IMG: "Jeep01_SpeedoNeedle"
+
+-----------------------------------------------------------------------------------
+
+
+In: "Jeep01_SpeedoNeedle"
+
+Adjust:
+
+Rect Transform:
+---------------
+
+Middle Center
+
+Pos Y: -24
+
+Width: 260
+Height: 260
+
+
+In: "Image"
+
+
+Source Image: Speedometer-Needle
+
+Color: (Suggested Hex) 6B3232
+
+
+Note: Lastly, disable this object as we do not want this to display prior to
+awake or start methods and to do this we will disable this object by default
+and then there is a wrapper in the script that will find the inactive item in
+start thus doing what will be needed. So yeah, make sure to disable this
+object in the editor.
+
+
+-----------------------------------------------------------------------------------
+
+Step 29: In Interface > Canvas > VehiclesSpeed add TMP TEXT: "Jeep01_SpeedText"
+
+-----------------------------------------------------------------------------------
+
+
+In: "Jeep01_SpeedText"
+
+Adjust:
+
+Rect Transform:
+---------------
+
+Middle Center
+
+Pos Y: -120.4
+
+Width: 200
+Height: 50
+
+Text Input:
+-----------
+
+0 mph
+
+
+Font Size: 36 *
+
+Vertex Color: (Suggested Hex) FFFFFF
+
+Alignment: Center Middle
+
+Face:
+Dilate: 0.21 *
+
+Outline: YES
+Thickness: 0.121 *
+
+Underlay: YES
+Dilate: 0.02 *
+Softness: 0.522 *
+
+* Note these are just suggestions for you then to tweak and adjust further to
+  your likings.
+
+
+Note: Lastly, disable this object as we do not want this to display prior to
+awake or start methods and to do this we will disable this object by default
+and then there is a wrapper in the script that will find the inactive item in
+start thus doing what will be needed. So yeah, make sure to disable this
+object in the editor.
+
+
+-----------------------------------------------------------------------------------
+
+Step 30: In Vehicles > Jeep01 attach script: (Jeep01Speedometer.cs)
+
+-----------------------------------------------------------------------------------
+
+
+Attach Jeep01Speedometer script: (Jeep01Speedometer.cs) to
+Vehicle: "Jeep01"
+
+In: "Jeep01" > Jeep01 Speedometer (Script)
+
+Adjust the minimal settings as far as what is min needed: (Needle IMG and
+Speed Text)
+
+Needle: Jeep01_SpeedoNeedle
+
+Speed Text: Jeep01_SpeedText (Text Mesh Pro UGUI)
+
+GameObjects:
+
+Interface Parent Object: Jeep01Speedometer
+Interface IMG01 Object: Jeep01_SpeedoGuage
+Interface IMG02 Object: Jeep01_SpeedoNeedle
+Interface Text Object: Jeep01_SpeedText
+
+
+Input Actions:
+--------------
+
+Car Controls: CarControls (Input Action Asset)
+
+
+-----------------------------------------------------------------------------------
+
+
+Note: Lastly, in case you missed this notice previously, we need to disable
+the listed objects found below as we do not want these objects to display
+prior to awake or start methods and to do this we will disable this object by
+default and then there is a wrapper in the script that will find the inactive
+item in start thus doing what will be needed. So yeah, make sure to disable
+this object in the editor.
+
+Game Objects:
+
+Jeep01Speedometer
+Jeep01_SpeedoGuage
+Jeep01_SpeedoNeedle
+Jeep01_SpeedText
+
+
+-----------------------------------------------------------------------------------
+
+Notes: Current Summary
+
+-----------------------------------------------------------------------------------
+
+
+Note: Ok, by now your heirarchy should look like this:
+
+Mostly Collapsed:
+
+
+Environment
+  Directional Light
+  Terrain
+  Terrain Plane
+Player
+  View
+    Camera
+Vehicles
+  Jeep01
+    SM_Veh_4x4_Car_Door_L_01
+    SM_Veh_4x4_Car_Door_R_01
+    SM_Veh_4x4_Car_Glass_01
+    SM_Veh_4x4_Car_Rear_Door_01
+    SM_Veh_4x4_Car_Rear_Seat_01
+    SM_Veh_4x4_Car_SteeringW_01
+    WheelMeshes
+    WheelColliders   
+    View
+Interface
+  Canvas
+    VehiclesSpeed
+    VehiclesEntry
+EventSystem
+
+Fully Expanded:
+
+Environment
+  Directional Light
+  Terrain
+  Terrain Plane
+Player
+  View
+    Camera
+Vehicles
+  Jeep01
+    SM_Veh_4x4_Car_Door_L_01
+    SM_Veh_4x4_Car_Door_R_01
+    SM_Veh_4x4_Car_Glass_01
+    SM_Veh_4x4_Car_Rear_Door_01
+    SM_Veh_4x4_Car_Rear_Seat_01
+    SM_Veh_4x4_Car_SteeringW_01
+    WheelMeshes
+      SM_Veh_4x4_Car_Wheel_fl_01
+      SM_Veh_4x4_Car_Wheel_fr_01
+      SM_Veh_4x4_Car_Wheel_rl_01
+      SM_Veh_4x4_Car_Wheel_rr_01    
+    WheelColliders
+      SM_Veh_4x4_Car_Wheel_fl_01
+      SM_Veh_4x4_Car_Wheel_fr_01
+      SM_Veh_4x4_Car_Wheel_rl_01
+      SM_Veh_4x4_Car_Wheel_rr_01   
+    View
+      Jeep01Camera
+Interface
+  Canvas
+    VehiclesSpeed
+      Jeep01Speedometer
+        Jeep01_SpeedoGuage
+        Jeep01_SpeedoNeedle
+        Jeep01_SpeedText
+    VehiclesEntry
+      Jeep01_EntryKey
+EventSystem
+
+
+-----------------------------------------------------------------------------------
+
+
+NEXT: We setup the base Compass, add the player compass and first vehicle compass
+
+
+------------------------------------------------------------------------------------
+
+Step 31: Interface -> Canvas
+
+------------------------------------------------------------------------------------
+
+
+31.A) Inside "Interface", modify UI: -> "Canvas"
+
+Note: You can set your canvas up how you want, that is why I did not comment much 
+      on such. Same goes fo uvRect on things within the UI canvas as that is perhaps 
+      personal prefs and for these instructions one assumed one would just start with 
+      the default middle center such and tweak such from there.
+
+     * Such is up to the end-user and their prefs, but just so noone says I left it 
+     out, so here is just one "Canvas" example:
+
+      UI Scaler: 
+      ----------
+
+      UI Scale Mode: Scale With Screen Size
+      Reference Resolution: X: 1920 Y: 1080
+      Match: 0 (Width)
+      Reference Pixels Per: 1920
+
+      
+31.B) Inside the "Canvas", create a new empty called: "Compass"
+     * Note: This will house all the compass related stuff
+
+31.C) Add / Modify Details for "Compass":
+
+Rect Transform Anchors: middle & center * 
+
+ * default, though you can change as you desire later
+
+Position: X: 357 Y: -229 Z: 0
+Width: 100
+Height: 100     
+
+
+------------------------------------------------------------------------------------
+
+Step 32: Add: Text Mesh Pro Text
+
+------------------------------------------------------------------------------------
+
+
+32.A) Inside "Compass", create a UI: -> "Text Mesh Pro (TMP)" and rename it 
+     to: "Compass_DegreeText" *
+
+     * Layer should also be "UI"
+
+32.B) Add / Modify Details for "Compass_DegreeText":
+
+Rect Transform Anchors: middle & center * 
+
+ * default, though you can change as you desire later
+
+Position: X: -357 Y: 338 Z: 0
+Width: 200
+Height: 200
+
+Text: 360
+Font: LiberationSans SDF
+Material Preset: LiberationSans SDF Material
+Font Style: Bold
+Font Size: 48
+Vertex Color: Hex: #FFFFFF
+Alignment: Center & Top
+Overflow: Overflow
+
+
+------------------------------------------------------------------------------------
+
+Step 33: Add: RawImage 1
+
+------------------------------------------------------------------------------------
+
+
+33.A) Inside "Compass", create a UI: -> RawImage
+
+33.B) Rename the "RawImage" to: "Compass_Background"
+
+33.C) In Inspector Edit the following as follows:
+
+Rect Transform Anchors: middle & center * 
+
+ * default, though you can change as you desire later
+
+Position: X: -357 Y: 486 Z: 0
+Width: 1152
+Height: 77
+Scale: X: 0.875 Y: 1 Z: 1
+
+33.D)Add / Import the actual image to your project: "CompassBackground.png"
+
+Change the folllowing settings as such:
+
+ Texture Type: Sprite (2D and UI)
+ Texture Shape: 2D
+ Compression: None
+
+ Then select "Apply" to apply the changes.
+
+ 33.E) Lastly, now we need to add the actual image we just imported.
+
+      So go back into Interface -> Canvas - Compass -> "Compass_Background"
+      via "Inspector" and find: "RawImage"
+
+      Change the folllowing settings as such:
+
+ Texture: "CompassBackground.png"
+
+ Color: set "rgba" as follows:
+
+ R: 127
+ G: 127
+ B: 127
+ A: 25     
+
+
+------------------------------------------------------------------------------------
+
+Step 34: Add: RawImage 2
+
+------------------------------------------------------------------------------------
+
+
+34.A) Inside "Compass", create a UI: -> RawImage
+
+34.B) Rename the "RawImage" to: "Compass_Foreground"
+
+34.C) In Inspector Edit the following as follows:
+
+Rect Transform Anchors: middle & center * 
+
+ * default, though you can change as you desire later
+
+Position: X: -357 Y: 486 Z: 0
+Width: 1152
+Height: 77
+Scale: X: 1 Y: 1 Z: 1
+
+34.D) Add / Import the actual image to your project: "CompassForeground.png"
+
+Change the folllowing settings as such:
+
+ Texture Type: Sprite (2D and UI)
+ Texture Shape: 2D
+ Compression: None
+ Wrap Mode: Repeat * 
+
+ * Note: This is very important for compass to rotate / display correctly!
+
+ Then select "Apply" to apply the changes.
+
+ 34.E) Lastly, now we need to add the actual image we just imported.
+
+      So go back into Interface -> Canvas -> Compass -> "Compass_Foreground"
+      via "Inspector" and find: "RawImage"
+
+      Change the folllowing settings as such:
+
+ Texture: "CompassForeground.png"    
+
+
+------------------------------------------------------------------------------------
+
+Step 35: Add: Component / Script: PlayerCompass.cs
+
+------------------------------------------------------------------------------------
+
+
+35.A) Go back to: Interface -> Canvas -> Compass
+     
+     Add component / script: "PlayerCompass.cs"
+
+35.B) Ok, now fill out the related settings:
+
+For -> PlayerCompass (Script):
+--------------------------------
+
+Script: PlayerCompass.cs
+Compass Foreground: Compass_Foreground (Raw Image)
+Compass Background: Compass_Background (Raw Image)
+Player: Player (Transform)
+Compass Direction: Compass_DegreeText (Text Mesh Pro)
+Compass Enabled: Check this 
+
+
+------------------------------------------------------------------------------------
+
+Step 36: Add: Component / Script: Jeep01Compass.cs
+
+------------------------------------------------------------------------------------
+
+
+36.A) Go back to: Interface -> Canvas -> Compass
+     
+     Add component / script: "Jeep01Compass.cs"
+
+36.B) Ok, now fill out the related settings:
+
+For -> Jeep01Compass (Script):
+---------------------------------------
+
+Script: Jeep01Compass.cs
+Compass Foreground: Compass_Foreground (Raw Image)
+Compass Background: Compass_Background (Raw Image)
+Jeep01: Jeep01 (Transform)
+Compass Direction: Compass_DegreeText (Text Mesh Pro)
+Compass Enabled: Uncheck this 
+
+
+------------------------------------------------------------------------------------
+
+Step 37: Edit Settings in: Jeep01Entry (Script)
+
+------------------------------------------------------------------------------------
+
+
+Compass
+-------
+
+Player Compass: Compass (Player Compass)
+Jeep 01 Compass: Compass (Jeep01 Compass)
+
+
+------------------------------------------------------------------------------------
+
+Step 38: Finally, let us simply resize the compass
+
+------------------------------------------------------------------------------------
+
+
+In Interface -> Canvas -> Compass
+
+
+Compass:
+
+Rect Transform
+--------------
+
+Top & Center
+
+Position: X: 357 Y: -516 Z: 0
+
+
+
+In Interface -> Canvas -> Compass -> Compass_Background
+
+
+Compass_Background:
+
+
+Rect Transform
+--------------
+
+Width: 1920
+
+
+
+In Interface -> Canvas -> Compass -> Compass_Foreground
+
+
+Compass_Foreground:
+
+
+Rect Transform
+--------------
+
+Width: 1920
+
+
+-----------------------------------------------------------------------------------
+
+
+FINAL NOTE: In your vehicle camera (script) you may need or opt or
+not to adjust some settings to suit your likings more say things like for
+example: Distance, height, field of view, etc, etc... This is entirely up to
+you if you desire to do such or not...
+
+
+-----------------------------------------------------------------------------------
+
+Notes: Current Summary
+
+-----------------------------------------------------------------------------------
+
+
+Note: Ok, by now your heirarchy should look like this:
+
+Mostly Collapsed:
+
+
+Environment
+  Directional Light
+  Terrain
+  Terrain Plane
+Player
+  View
+    Camera
+Vehicles
+  Jeep01
+    SM_Veh_4x4_Car_Door_L_01
+    SM_Veh_4x4_Car_Door_R_01
+    SM_Veh_4x4_Car_Glass_01
+    SM_Veh_4x4_Car_Rear_Door_01
+    SM_Veh_4x4_Car_Rear_Seat_01
+    SM_Veh_4x4_Car_SteeringW_01
+    WheelMeshes
+    WheelColliders   
+    View
+Interface
+  Canvas
+    Compass  
+    VehiclesSpeed
+    VehiclesEntry
+EventSystem
+
+Fully Expanded:
+
+Environment
+  Directional Light
+  Terrain
+  Terrain Plane
+Player
+  View
+    Camera
+Vehicles
+  Jeep01
+    SM_Veh_4x4_Car_Door_L_01
+    SM_Veh_4x4_Car_Door_R_01
+    SM_Veh_4x4_Car_Glass_01
+    SM_Veh_4x4_Car_Rear_Door_01
+    SM_Veh_4x4_Car_Rear_Seat_01
+    SM_Veh_4x4_Car_SteeringW_01
+    WheelMeshes
+      SM_Veh_4x4_Car_Wheel_fl_01
+      SM_Veh_4x4_Car_Wheel_fr_01
+      SM_Veh_4x4_Car_Wheel_rl_01
+      SM_Veh_4x4_Car_Wheel_rr_01    
+    WheelColliders
+      SM_Veh_4x4_Car_Wheel_fl_01
+      SM_Veh_4x4_Car_Wheel_fr_01
+      SM_Veh_4x4_Car_Wheel_rl_01
+      SM_Veh_4x4_Car_Wheel_rr_01   
+    View
+      Jeep01Camera
+Interface
+  Canvas
+    Compass
+      Compass_DegreeText
+      Compass_Background
+      Compass_Foreground
+    VehiclesSpeed
+      Jeep01Speedometer
+        Jeep01_SpeedoGuage
+        Jeep01_SpeedoNeedle
+        Jeep01_SpeedText
+    VehiclesEntry
+      Jeep01_EntryKey
+EventSystem
+
+
+-----------------------------------------------------------------------------------
+
+Step 39: Identify: the next "Vehicle Prefab"
+
+-----------------------------------------------------------------------------------
+
+
+Let us first identify and locate the "Vehicle Prefab" we are going to use.
+
+Assets > PolygonExplorers > Prefabs > Vehicles
+
+SM_Veh_4x4_Car_01
+
+
+-----------------------------------------------------------------------------------
+
+Step 40: Add: the next "Vehicle Prefab" to Scene
+
+-----------------------------------------------------------------------------------
+
+
+Drag the mentioned "Vehicle Prefab" into the scene & unpack the prefab completely.
+
+Next, rename the vehicle prefabs:
+
+SM_Veh_4x4_Car_01 => "Jeep02"
+
+Next, set the Transform:
+
+Position: X: -3 Y: 0 Z: 0 
+Rotation: X: 0 Y: 0 Z: 0 
+Scale:    X: 1 Y: 1 Z: 1
+
+Material: PolygonExplorers_02_A
+
+Then move "Jeep02" into the empty: "Vehicles" as child of.
+
+
+-----------------------------------------------------------------------------------
+
+Step 41: Add: empty "View" as child
+
+-----------------------------------------------------------------------------------
+
+
+In "Jeep02" add empty as child named "View"
+
+Set the Transform of "View":
+
+Position: X: 0 Y: 0 Z: 0 
+Rotation: X: 0 Y: 0 Z: 0 
+Scale:    X: 1 Y: 1 Z: 1
+
+
+-----------------------------------------------------------------------------------
+
+Step 42: Add: "Camera" in empty "View" as child
+
+-----------------------------------------------------------------------------------
+
+
+In the empty: "View" add "Camera" component named: "Jeep02Camera"
+
+Tag: Untagged
+
+Depth: 0
+
+Set the Transform of "Jeep02Camera":
+
+Position: X: 0 Y: 1.64 Z: -6.4 
+Rotation: X: 0 Y: 0 Z: 0 
+Scale:    X: 1 Y: 1 Z: 1
+
+
+-----------------------------------------------------------------------------------
+
+Step 43: Add: empty "WheelMeshes" as child
+
+-----------------------------------------------------------------------------------
+
+
+In "Jeep02" add empty as child named "WheelMeshes"
+
+Set the Transform of "WheelMeshes":
+
+Position: X: 0 Y: 0 Z: 0 
+Rotation: X: 0 Y: 0 Z: 0 
+Scale:    X: 1 Y: 1 Z: 1
+
+Copy & paste the following meshes into "WheelMeshes" as children
+(delete originals after as they are not needed since we copied them into new
+location)
+
+SM_Veh_4x4_Car_Wheel_fl_01
+SM_Veh_4x4_Car_Wheel_fr_01
+SM_Veh_4x4_Car_Wheel_rl_01
+SM_Veh_4x4_Car_Wheel_rr_01
+
+Transforms should be fine and unaffected but, let us just mention them for
+good measure.
+
+SM_Veh_4x4_Car_Wheel_fl_01
+---------------------------
+
+Position: X: -0.8105161 Y: 0.4639312 Z: 1.305854
+Rotation: X: 0 Y: 0 Z: 0 
+Scale:    X: 1 Y: 1 Z: 1
+
+
+SM_Veh_4x4_Car_Wheel_fr_01
+---------------------------
+
+Position: X: 0.8105161 Y: 0.4639312 Z: 1.305854
+Rotation: X: 0 Y: 0 Z: 0 
+Scale:    X: 1 Y: 1 Z: 1
+
+
+SM_Veh_4x4_Car_Wheel_rl_01
+---------------------------
+
+Position: X: -0.9462859 Y: 0.4639312 Z: -1.2084
+Rotation: X: 0 Y: 0 Z: 0 
+Scale:    X: 1 Y: 1 Z: 1
+
+
+SM_Veh_4x4_Car_Wheel_rr_01
+---------------------------
+
+Position: X: 0.9462859 Y: 0.4639312 Z: -1.2084
+Rotation: X: 0 Y: 0 Z: 0 
+Scale:    X: 1 Y: 1 Z: 1
+
+
+-----------------------------------------------------------------------------------
+
+Step 44: Duplicate: empty "WheelMeshes" as "WheelColliders"
+
+-----------------------------------------------------------------------------------
+
+
+In "Jeep02" duplicate "WheelMeshes" & rename to "WheelColliders"
+
+Set the Transform of "WheelColliders":
+
+Position: X: 0 Y: 0 Z: 0 
+Rotation: X: 0 Y: 0 Z: 0 
+Scale:    X: 1 Y: 1 Z: 1
+
+
+Since you duplicated "WheelMeshes" & renamed to "WheelColliders" there should
+be the children already present with matching infos...
+
+SM_Veh_4x4_Car_Wheel_fl_01
+SM_Veh_4x4_Car_Wheel_fr_01
+SM_Veh_4x4_Car_Wheel_rl_01
+SM_Veh_4x4_Car_Wheel_rr_01
+
+
+Prior to the deletion of contents in WheelColliders if you desired to
+determine the wheel radius so as to eventually use with Wheel Colliders well,
+you could attach a Sphere Collider and gain Radius from that and then delete
+the sphere collider after as such would no longer be necessary but instead to
+avoid needing to do such I will provide that info so you do not necessarily
+need to do so.
+
+These details are important:
+
+
+Wheel Collider Radius: 0.4938253
+Wheel Collider Position: Y: 0.6139312 (0.4639312+0.15) *
+
+* Wheel colliders need +0.15 on the Y to function as intended as per
+  documentation
+
+In "WheelColliders" children: * (since all are already present in WheelMeshes
+and not needed for Wheel Colliders)
+
+* Delete Mesh Filter
+* Delete Mesh Renderer
+
+Add Component "Wheel Collider" to each:
+
+SM_Veh_4x4_Car_Wheel_fl_01
+SM_Veh_4x4_Car_Wheel_fr_01
+SM_Veh_4x4_Car_Wheel_rl_01
+SM_Veh_4x4_Car_Wheel_rr_01
+
+Set both front "Wheel Colliders" radius: 0.4938253
+Set both rear  "Wheel Colliders" radius: 0.4938253
+
+
+We will need to now edit these infos:
+
+
+SM_Veh_4x4_Car_Wheel_fl_01
+---------------------------
+
+Position: X: -0.8105161 Y: 0.6139312 Z: 1.305854
+Rotation: X: 0 Y: 0 Z: 0 
+Scale:    X: 1 Y: 1 Z: 1
+
+
+SM_Veh_4x4_Car_Wheel_fr_01
+---------------------------
+
+Position: X: 0.8105161 Y: 0.6139312 Z: 1.305854
+Rotation: X: 0 Y: 0 Z: 0 
+Scale:    X: 1 Y: 1 Z: 1
+
+
+SM_Veh_4x4_Car_Wheel_rl_01
+---------------------------
+
+Position: X: -0.9462859 Y: 0.6139312 Z: -1.2084
+Rotation: X: 0 Y: 0 Z: 0 
+Scale:    X: 1 Y: 1 Z: 1
+
+
+SM_Veh_4x4_Car_Wheel_rr_01
+---------------------------
+
+Position: X: 0.9462859 Y: 0.6139312 Z: -1.2084
+Rotation: X: 0 Y: 0 Z: 0 
+Scale:    X: 1 Y: 1 Z: 1
+
+
+-----------------------------------------------------------------------------------
+
+Notes: Current Summary
+
+-----------------------------------------------------------------------------------
+
+
+Note: Ok, by now your vehicle heirarchy should look like this:
+
+Mostly Collapsed:
+
+Vehicles
+  Jeep01
+    SM_Veh_4x4_Car_Door_L_01
+    SM_Veh_4x4_Car_Door_R_01
+    SM_Veh_4x4_Car_Glass_01
+    SM_Veh_4x4_Car_Rear_Door_01
+    SM_Veh_4x4_Car_Rear_Seat_01
+    SM_Veh_4x4_Car_SteeringW_01
+    WheelMeshes
+    WheelColliders   
+    View
+  Jeep02
+    SM_Veh_4x4_Car_Door_L_01
+    SM_Veh_4x4_Car_Door_R_01
+    SM_Veh_4x4_Car_Glass_01
+    SM_Veh_4x4_Car_Rear_Door_01
+    SM_Veh_4x4_Car_Rear_Seat_01
+    SM_Veh_4x4_Car_SteeringW_01
+    WheelMeshes
+    WheelColliders   
+    View
+
+Fully Expanded:
+
+Vehicles
+  Jeep01
+    SM_Veh_4x4_Car_Door_L_01
+    SM_Veh_4x4_Car_Door_R_01
+    SM_Veh_4x4_Car_Glass_01
+    SM_Veh_4x4_Car_Rear_Door_01
+    SM_Veh_4x4_Car_Rear_Seat_01
+    SM_Veh_4x4_Car_SteeringW_01
+    WheelMeshes
+      SM_Veh_4x4_Car_Wheel_fl_01
+      SM_Veh_4x4_Car_Wheel_fr_01
+      SM_Veh_4x4_Car_Wheel_rl_01
+      SM_Veh_4x4_Car_Wheel_rr_01    
+    WheelColliders
+      SM_Veh_4x4_Car_Wheel_fl_01
+      SM_Veh_4x4_Car_Wheel_fr_01
+      SM_Veh_4x4_Car_Wheel_rl_01
+      SM_Veh_4x4_Car_Wheel_rr_01   
+    View
+      Jeep01Camera
+  Jeep02
+    SM_Veh_4x4_Car_Door_L_01
+    SM_Veh_4x4_Car_Door_R_01
+    SM_Veh_4x4_Car_Glass_01
+    SM_Veh_4x4_Car_Rear_Door_01
+    SM_Veh_4x4_Car_Rear_Seat_01
+    SM_Veh_4x4_Car_SteeringW_01
+    WheelMeshes
+      SM_Veh_4x4_Car_Wheel_fl_01
+      SM_Veh_4x4_Car_Wheel_fr_01
+      SM_Veh_4x4_Car_Wheel_rl_01
+      SM_Veh_4x4_Car_Wheel_rr_01    
+    WheelColliders
+      SM_Veh_4x4_Car_Wheel_fl_01
+      SM_Veh_4x4_Car_Wheel_fr_01
+      SM_Veh_4x4_Car_Wheel_rl_01
+      SM_Veh_4x4_Car_Wheel_rr_01   
+    View
+      Jeep02Camera
+
+
+-----------------------------------------------------------------------------------
+
+Step 45: Add to: Jeep02 (Jeep02Controller.cs)
+
+-----------------------------------------------------------------------------------
+
+
+Attach component / script (Jeep02Controller.cs) to "Jeep02"
+
+Adjust the following settings:
+
+Require Components:
+-------------------
+
+Rigidbody: Jeep02 (Rigidbody)
+Mesh Collider: Jeep02 (Mesh Collider)
+
+Wheel Transforms:
+-----------------
+
+Front Left: SM_Veh_4x4_Car_Wheel_fl_01 (Transform)
+Front Right: SM_Veh_4x4_Car_Wheel_fr_01 (Transform)
+Rear Left: SM_Veh_4x4_Car_Wheel_rl_01 (Transform)
+Rear Right: SM_Veh_4x4_Car_Wheel_rr_01 (Transform)
+
+WheelColliders:
+---------------
+
+Front Left: SM_Veh_4x4_Car_Wheel_fl_01 (Wheel Collider)
+Front Right: SM_Veh_4x4_Car_Wheel_fr_01 (Wheel Collider)
+Rear Left: SM_Veh_4x4_Car_Wheel_rl_01 (Wheel Collider)
+Rear Right: SM_Veh_4x4_Car_Wheel_rr_01 (Wheel Collider)
+
+Rigidbody Mass:
+---------------
+
+Set Rigibody Mass: 2000
+
+
+Input Actions:
+--------------
+
+Car Controls: CarControls (Input Action Asset)
+
+
+-----------------------------------------------------------------------------------
+
+Step 46: Add to: Jeep02Camera (Jeep02Camera.cs)
+
+-----------------------------------------------------------------------------------
+
+
+Attach component / script (Jeep02Camera.cs) to "Jeep02Camera"
+
+
+Adjust Settings:
+
+Transforms:
+-----------
+
+Jeep02: Jeep02 (Transform)
+
+
+Distance: 6.4
+Height: 1.4
+
+
+You can keep settings as is or tweak them to your likings! *
+
+* ie: (tweak camera distance)
+* ie: (tweak camera height)
+
+Distance: 6.8
+Height: 2.2
+
+
+Note: You will find that later if you are opting to say add the compass, being
+able to adjust / tweak the distance and height of camera becomes very
+useful!
+
+
+-----------------------------------------------------------------------------------
+
+Step 47:  Create child of "VehiclesEntry" add Text tmp: "Jeep02_EntryKey"
+
+-----------------------------------------------------------------------------------
+
+Create as a child of "VehiclesEntry" add TextMeshPro Text: "Jeep02_EntryKey"
+
+Layer: "UI"
+
+
+Rect Transform: 
+---------------
+
+Set at "Top Center"
+
+Position: X: 0 Y: -50   Z: 0 
+Width: 100
+Height: 100
+
+
+Text Input: Drive [E]
+
+Font Size: 36
+
+Alignment: Center & Middle
+
+Face:
+-----
+Dilate: 0.21
+
+Outline: Yes Thickness: 0.121
+
+Underlay: Yes Softness: 0.522
+
+Note: The face, outline and underlay are merely starting suggestions that you
+can tweak further to your desired likings as well as any other related
+settings of the likes.
+
+Note: Lastly, disable this object as we do not want this to display prior to
+awake or start methods and to do this we will disable this object by default
+and then there is a wrapper in the script that will find the inactive item in
+start thus doing what will be needed. So yeah, make sure to disable this
+object in the editor.
+
+Ok, now that this part is done we can start moving to other setup steps...
+
+
+-----------------------------------------------------------------------------------
+
+Notes: Current Summary
+
+-----------------------------------------------------------------------------------
+
+
+Note: Ok, by now your vehicle heirarchy should look like this:
+
+Mostly Collapsed:
+
+Vehicles
+  Jeep01
+    SM_Veh_4x4_Car_Door_L_01
+    SM_Veh_4x4_Car_Door_R_01
+    SM_Veh_4x4_Car_Glass_01
+    SM_Veh_4x4_Car_Rear_Door_01
+    SM_Veh_4x4_Car_Rear_Seat_01
+    SM_Veh_4x4_Car_SteeringW_01
+    WheelMeshes
+    WheelColliders   
+    View
+  Jeep02
+    SM_Veh_4x4_Car_Door_L_01
+    SM_Veh_4x4_Car_Door_R_01
+    SM_Veh_4x4_Car_Glass_01
+    SM_Veh_4x4_Car_Rear_Door_01
+    SM_Veh_4x4_Car_Rear_Seat_01
+    SM_Veh_4x4_Car_SteeringW_01
+    WheelMeshes
+    WheelColliders   
+    View
+Interface
+  Canvas
+    Compass
+    VehiclesSpeed    
+    VehiclesEntry
+EventSystem
+
+Fully Expanded:
+
+Vehicles
+  Jeep01
+    SM_Veh_4x4_Car_Door_L_01
+    SM_Veh_4x4_Car_Door_R_01
+    SM_Veh_4x4_Car_Glass_01
+    SM_Veh_4x4_Car_Rear_Door_01
+    SM_Veh_4x4_Car_Rear_Seat_01
+    SM_Veh_4x4_Car_SteeringW_01
+    WheelMeshes
+      SM_Veh_4x4_Car_Wheel_fl_01
+      SM_Veh_4x4_Car_Wheel_fr_01
+      SM_Veh_4x4_Car_Wheel_rl_01
+      SM_Veh_4x4_Car_Wheel_rr_01    
+    WheelColliders
+      SM_Veh_4x4_Car_Wheel_fl_01
+      SM_Veh_4x4_Car_Wheel_fr_01
+      SM_Veh_4x4_Car_Wheel_rl_01
+      SM_Veh_4x4_Car_Wheel_rr_01   
+    View
+      Jeep01Camera
+  Jeep02
+    SM_Veh_4x4_Car_Door_L_01
+    SM_Veh_4x4_Car_Door_R_01
+    SM_Veh_4x4_Car_Glass_01
+    SM_Veh_4x4_Car_Rear_Door_01
+    SM_Veh_4x4_Car_Rear_Seat_01
+    SM_Veh_4x4_Car_SteeringW_01
+    WheelMeshes
+      SM_Veh_4x4_Car_Wheel_fl_01
+      SM_Veh_4x4_Car_Wheel_fr_01
+      SM_Veh_4x4_Car_Wheel_rl_01
+      SM_Veh_4x4_Car_Wheel_rr_01    
+    WheelColliders
+      SM_Veh_4x4_Car_Wheel_fl_01
+      SM_Veh_4x4_Car_Wheel_fr_01
+      SM_Veh_4x4_Car_Wheel_rl_01
+      SM_Veh_4x4_Car_Wheel_rr_01   
+    View
+      Jeep02Camera
+Interface
+  Canvas
+    Compass
+      Compass_DegreeText
+      Compass_Background
+      Compass_Foreground
+    VehiclesSpeed
+      Jeep01Speedometer
+        Jeep01_SpeedoGuage
+        Jeep01_SpeedoNeedle
+        Jeep01_SpeedText        
+    VehiclesEntry
+      Jeep01_EntryKey    
+      Jeep02_EntryKey
+EventSystem
+
+
+-----------------------------------------------------------------------------------
+
+Notes: Current Summary
+
+-----------------------------------------------------------------------------------
+
+
+Note: Ok, by now your heirarchy should look like this:
+
+Mostly Collapsed:
+
+
+Environment
+  Directional Light
+  Terrain
+  Terrain Plane
+Player
+  View
+    Camera
+Vehicles
+  Jeep01
+    SM_Veh_4x4_Car_Door_L_01
+    SM_Veh_4x4_Car_Door_R_01
+    SM_Veh_4x4_Car_Glass_01
+    SM_Veh_4x4_Car_Rear_Door_01
+    SM_Veh_4x4_Car_Rear_Seat_01
+    SM_Veh_4x4_Car_SteeringW_01
+    WheelMeshes
+    WheelColliders   
+    View
+  Jeep02
+    SM_Veh_4x4_Car_Door_L_01
+    SM_Veh_4x4_Car_Door_R_01
+    SM_Veh_4x4_Car_Glass_01
+    SM_Veh_4x4_Car_Rear_Door_01
+    SM_Veh_4x4_Car_Rear_Seat_01
+    SM_Veh_4x4_Car_SteeringW_01
+    WheelMeshes
+    WheelColliders   
+    View
+Interface
+  Canvas
+    Compass
+    VehiclesSpeed
+    VehiclesEntry
+EventSystem
+
+Fully Expanded:
+
+Environment
+  Directional Light
+  Terrain
+  Terrain Plane
+Player
+  View
+    Camera
+Vehicles
+  Jeep01
+    SM_Veh_4x4_Car_Door_L_01
+    SM_Veh_4x4_Car_Door_R_01
+    SM_Veh_4x4_Car_Glass_01
+    SM_Veh_4x4_Car_Rear_Door_01
+    SM_Veh_4x4_Car_Rear_Seat_01
+    SM_Veh_4x4_Car_SteeringW_01
+    WheelMeshes
+      SM_Veh_4x4_Car_Wheel_fl_01
+      SM_Veh_4x4_Car_Wheel_fr_01
+      SM_Veh_4x4_Car_Wheel_rl_01
+      SM_Veh_4x4_Car_Wheel_rr_01    
+    WheelColliders
+      SM_Veh_4x4_Car_Wheel_fl_01
+      SM_Veh_4x4_Car_Wheel_fr_01
+      SM_Veh_4x4_Car_Wheel_rl_01
+      SM_Veh_4x4_Car_Wheel_rr_01   
+    View
+      Jeep01Camera
+  Jeep02
+    SM_Veh_4x4_Car_Door_L_01
+    SM_Veh_4x4_Car_Door_R_01
+    SM_Veh_4x4_Car_Glass_01
+    SM_Veh_4x4_Car_Rear_Door_01
+    SM_Veh_4x4_Car_Rear_Seat_01
+    SM_Veh_4x4_Car_SteeringW_01
+    WheelMeshes
+      SM_Veh_4x4_Car_Wheel_fl_01
+      SM_Veh_4x4_Car_Wheel_fr_01
+      SM_Veh_4x4_Car_Wheel_rl_01
+      SM_Veh_4x4_Car_Wheel_rr_01    
+    WheelColliders
+      SM_Veh_4x4_Car_Wheel_fl_01
+      SM_Veh_4x4_Car_Wheel_fr_01
+      SM_Veh_4x4_Car_Wheel_rl_01
+      SM_Veh_4x4_Car_Wheel_rr_01   
+    View
+      Jeep02Camera
+Interface
+  Canvas
+    Compass
+      Compass_DegreeText
+      Compass_Background
+      Compass_Foreground
+    VehiclesSpeed
+      Jeep01Speedometer
+        Jeep01_SpeedoGuage
+        Jeep01_SpeedoNeedle
+        Jeep01_SpeedText        
+    VehiclesEntry
+      Jeep01_EntryKey    
+      Jeep02_EntryKey
+EventSystem
+
+
+-----------------------------------------------------------------------------------
+
+Step 48: Add to: Jeep02 (Jeep02Entry.cs)
+
+-----------------------------------------------------------------------------------
+
+
+Attach component / script (Jeep02Entry.cs) to "Jeep02"
+
+Adjust the following settings:
+
+
+Game Objects:
+-------------
+
+Jeep02: Jeep02
+Player: Player
+InterfaceText Object: Jeep02_EntryKey
+
+
+In Box Collider:
+----------------
+
+Is Trigger: Yes
+
+Edit Collider: YES!* 
+
+* Edit the collider to be around the vehicle doors makings sure to extend the
+  collider a good bit out away from doors so as to allow for a good trigger
+  zone. Here is just an example that I suggest you tweak further to your
+  likings and needs:
+
+Center: X: 0.05843675 Y: 1.107235 Z: -0.05913931
+Size: X: 3.934733 Y: 1.711891 Z: 0.9941341
+
+
+Input Actions:
+--------------
+
+Car Controls: CarControls (Input Action Asset)
+
+
+-----------------------------------------------------------------------------------
+
+Step 49: In "VehiclesSpeed" create empty child: "Jeep02Speedometer"
+
+-----------------------------------------------------------------------------------
+
+
+In "Jeep02Speedometer"
+
+Adjust:
+
+Rect Transform:
+---------------
+
+Middle Center
+
+Width: 300
+Height: 300
+
+* something to note on placement: ok, when you add the script later in steps
+  you will notice an option in script settings for setting on choice of
+  either kph or mph in regards to SpeedText output, ok, with taking that into
+  account you can now possibly understand the following note about placement
+  of the interface items specific to such, mkay lets say that these setup
+  steps suggest setting all on the bottom left and that is because we are
+  using mph for the speed text output display thus such would make sense to
+  have speedometer and speed text on left bottom, but, ok, say you select kph
+  as speed text output, then it just might make sence to set the interface
+  items to the bottom right and that is why these suggestions are mentioned.
+  The choice is yours on that.
+
+
+-----------------------------------------------------------------------------------
+
+Step 50: In Interface > Canvas > VehiclesSpeed add UI IMG: "Jeep02_SpeedoGuage"
+
+-----------------------------------------------------------------------------------
+
+
+In: "Jeep02_SpeedoGuage"
+
+Adjust:
+
+Rect Transform:
+---------------
+
+Middle Center
+
+Width: 300
+Height: 300
+
+
+In: "Image"
+
+
+Source Image: Speedometer-Guage
+
+Color: (Suggested Hex) FFFFFF
+
+
+Note: Lastly, disable this object as we do not want this to display prior to
+awake or start methods and to do this we will disable this object by default
+and then there is a wrapper in the script that will find the inactive item in
+start thus doing what will be needed. So yeah, make sure to disable this
+object in the editor.
+
+
+-----------------------------------------------------------------------------------
+
+Step 51: In Interface > Canvas > VehiclesSpeed add IMG: "Jeep02_SpeedoNeedle"
+
+-----------------------------------------------------------------------------------
+
+
+In: "Jeep02_SpeedoNeedle"
+
+Adjust:
+
+Rect Transform:
+---------------
+
+Middle Center
+
+Pos Y: -24
+
+Width: 260
+Height: 260
+
+
+In: "Image"
+
+
+Source Image: Speedometer-Needle
+
+Color: (Suggested Hex) 6B3232
+
+
+Note: Lastly, disable this object as we do not want this to display prior to
+awake or start methods and to do this we will disable this object by default
+and then there is a wrapper in the script that will find the inactive item in
+start thus doing what will be needed. So yeah, make sure to disable this
+object in the editor.
+
+
+-----------------------------------------------------------------------------------
+
+Step 52: In Interface > Canvas > VehiclesSpeed add TMP TEXT: "Jeep02_SpeedText"
+
+-----------------------------------------------------------------------------------
+
+
+In: "Jeep02_SpeedText"
+
+Adjust:
+
+Rect Transform:
+---------------
+
+Middle Center
+
+Pos Y: -120.4
+
+Width: 200
+Height: 50
+
+Text Input:
+-----------
+
+0 mph
+
+
+Font Size: 36 *
+
+Vertex Color: (Suggested Hex) FFFFFF
+
+Alignment: Center Middle
+
+Face:
+Dilate: 0.21 *
+
+Outline: YES
+Thickness: 0.121 *
+
+Underlay: YES
+Dilate: 0.02 *
+Softness: 0.522 *
+
+* Note these are just suggestions for you then to tweak and adjust further to
+  your likings.
+
+
+Note: Lastly, disable this object as we do not want this to display prior to
+awake or start methods and to do this we will disable this object by default
+and then there is a wrapper in the script that will find the inactive item in
+start thus doing what will be needed. So yeah, make sure to disable this
+object in the editor.
+
+
+-----------------------------------------------------------------------------------
+
+Step 53: In Vehicles > Jeep02 attach script: (Jeep02Speedometer.cs)
+
+-----------------------------------------------------------------------------------
+
+
+Attach Jeep02Speedometer script: (Jeep02Speedometer.cs) to
+Vehicle: "Jeep02"
+
+In: "Jeep02" > Jeep02 Speedometer (Script)
+
+Adjust the minimal settings as far as what is min needed: (Needle IMG and
+Speed Text)
+
+Needle: Jeep02_SpeedoNeedle
+
+Speed Text: Jeep02_SpeedText (Text Mesh Pro UGUI)
+
+GameObjects:
+
+Interface Parent Object: Jeep02Speedometer
+Interface IMG01 Object: Jeep02_SpeedoGuage
+Interface IMG02 Object: Jeep02_SpeedoNeedle
+Interface Text Object: Jeep02_SpeedText
+
+Input Actions:
+--------------
+
+Car Controls: CarControls (Input Action Asset)
+
+
+-----------------------------------------------------------------------------------
+
+
+Note: Lastly, in case you missed this notice previously, we need to disable
+the listed objects found below as we do not want these objects to display
+prior to awake or start methods and to do this we will disable this object by
+default and then there is a wrapper in the script that will find the inactive
+item in start thus doing what will be needed. So yeah, make sure to disable
+this object in the editor.
+
+Game Objects:
+
+Jeep02Speedometer
+Jeep02_SpeedoGuage
+Jeep02_SpeedoNeedle
+Jeep02_SpeedText
+
+
+-----------------------------------------------------------------------------------
+
+Notes: Current Summary
+
+-----------------------------------------------------------------------------------
+
+
+Note: Ok, by now your heirarchy should look like this:
+
+Mostly Collapsed:
+
+
+Environment
+  Directional Light
+  Terrain
+  Terrain Plane
+Player
+  View
+    Camera
+Vehicles
+  Jeep01
+    SM_Veh_4x4_Car_Door_L_01
+    SM_Veh_4x4_Car_Door_R_01
+    SM_Veh_4x4_Car_Glass_01
+    SM_Veh_4x4_Car_Rear_Door_01
+    SM_Veh_4x4_Car_Rear_Seat_01
+    SM_Veh_4x4_Car_SteeringW_01
+    WheelMeshes
+    WheelColliders   
+    View
+  Jeep02
+    SM_Veh_4x4_Car_Door_L_01
+    SM_Veh_4x4_Car_Door_R_01
+    SM_Veh_4x4_Car_Glass_01
+    SM_Veh_4x4_Car_Rear_Door_01
+    SM_Veh_4x4_Car_Rear_Seat_01
+    SM_Veh_4x4_Car_SteeringW_01
+    WheelMeshes
+    WheelColliders   
+    View
+Interface
+  Canvas
+    Compass
+    VehiclesSpeed
+    VehiclesEntry
+EventSystem
+
+Fully Expanded:
+
+Environment
+  Directional Light
+  Terrain
+  Terrain Plane
+Player
+  View
+    Camera
+Vehicles
+  Jeep01
+    SM_Veh_4x4_Car_Door_L_01
+    SM_Veh_4x4_Car_Door_R_01
+    SM_Veh_4x4_Car_Glass_01
+    SM_Veh_4x4_Car_Rear_Door_01
+    SM_Veh_4x4_Car_Rear_Seat_01
+    SM_Veh_4x4_Car_SteeringW_01
+    WheelMeshes
+      SM_Veh_4x4_Car_Wheel_fl_01
+      SM_Veh_4x4_Car_Wheel_fr_01
+      SM_Veh_4x4_Car_Wheel_rl_01
+      SM_Veh_4x4_Car_Wheel_rr_01    
+    WheelColliders
+      SM_Veh_4x4_Car_Wheel_fl_01
+      SM_Veh_4x4_Car_Wheel_fr_01
+      SM_Veh_4x4_Car_Wheel_rl_01
+      SM_Veh_4x4_Car_Wheel_rr_01   
+    View
+      Jeep01Camera
+  Jeep02
+    SM_Veh_4x4_Car_Door_L_01
+    SM_Veh_4x4_Car_Door_R_01
+    SM_Veh_4x4_Car_Glass_01
+    SM_Veh_4x4_Car_Rear_Door_01
+    SM_Veh_4x4_Car_Rear_Seat_01
+    SM_Veh_4x4_Car_SteeringW_01
+    WheelMeshes
+      SM_Veh_4x4_Car_Wheel_fl_01
+      SM_Veh_4x4_Car_Wheel_fr_01
+      SM_Veh_4x4_Car_Wheel_rl_01
+      SM_Veh_4x4_Car_Wheel_rr_01    
+    WheelColliders
+      SM_Veh_4x4_Car_Wheel_fl_01
+      SM_Veh_4x4_Car_Wheel_fr_01
+      SM_Veh_4x4_Car_Wheel_rl_01
+      SM_Veh_4x4_Car_Wheel_rr_01   
+    View
+      Jeep02Camera
+Interface
+  Canvas
+    Compass
+      Compass_DegreeText
+      Compass_Background
+      Compass_Foreground  
+    VehiclesSpeed
+      Jeep01Speedometer
+        Jeep01_SpeedoGuage
+        Jeep01_SpeedoNeedle
+        Jeep01_SpeedText
+      Jeep02Speedometer
+        Jeep02_SpeedoGuage
+        Jeep02_SpeedoNeedle
+        Jeep02_SpeedText
+    VehiclesEntry
+      Jeep01_EntryKey
+      Jeep02_EntryKey      
+EventSystem
+
+
+-----------------------------------------------------------------------------------
+
+
+NEXT: We add the second vehicle compass
+
+
+------------------------------------------------------------------------------------
+
+Step 54: Add: Component / Script: Jeep02Compass.cs
+
+------------------------------------------------------------------------------------
+
+
+54.A) Go back to: Interface -> Canvas -> Compass
+     
+     Add component / script: "Jeep02Compass.cs"
+
+54.B) Ok, now fill out the related settings:
+
+For -> Jeep02Compass (Script):
+---------------------------------------
+
+Script: Jeep02Compass.cs
+Compass Foreground: Compass_Foreground (Raw Image)
+Compass Background: Compass_Background (Raw Image)
+Jeep02: Jeep02 (Transform)
+Compass Direction: Compass_DegreeText (Text Mesh Pro)
+Compass Enabled: Uncheck this 
+
+
+------------------------------------------------------------------------------------
+
+Step 55: Edit Settings in: Jeep02Entry (Script)
+
+------------------------------------------------------------------------------------
+
+
+Compass
+-------
+
+Player Compass: Compass (Player Compass)
+Jeep 02 Compass: Compass (Jeep 02 Compass)
+
+
+-----------------------------------------------------------------------------------
+
+
+FINAL NOTE: In your vehicle camera (script) you may need or opt or
+not to adjust some settings to suit your likings more say things like for
+example: Distance, height, field of view, etc, etc... This is entirely up to
+you if you desire to do such or not...
+
+
+-----------------------------------------------------------------------------------
+
+Notes: Current Summary
+
+-----------------------------------------------------------------------------------
+
+
+Note: Ok, by now your heirarchy should look like this:
+
+Mostly Collapsed:
+
+
+Environment
+  Directional Light
+  Terrain
+  Terrain Plane
+Player
+  View
+    Camera
+Vehicles
+  Jeep01
+    SM_Veh_4x4_Car_Door_L_01
+    SM_Veh_4x4_Car_Door_R_01
+    SM_Veh_4x4_Car_Glass_01
+    SM_Veh_4x4_Car_Rear_Door_01
+    SM_Veh_4x4_Car_Rear_Seat_01
+    SM_Veh_4x4_Car_SteeringW_01
+    WheelMeshes
+    WheelColliders   
+    View
+  Jeep02
+    SM_Veh_4x4_Car_Door_L_01
+    SM_Veh_4x4_Car_Door_R_01
+    SM_Veh_4x4_Car_Glass_01
+    SM_Veh_4x4_Car_Rear_Door_01
+    SM_Veh_4x4_Car_Rear_Seat_01
+    SM_Veh_4x4_Car_SteeringW_01
+    WheelMeshes
+    WheelColliders   
+    View
+Interface
+  Canvas
+    Compass
+    VehiclesSpeed
+    VehiclesEntry
+EventSystem
+
+Fully Expanded:
+
+Environment
+  Directional Light
+  Terrain
+  Terrain Plane
+Player
+  View
+    Camera
+Vehicles
+  Jeep01
+    SM_Veh_4x4_Car_Door_L_01
+    SM_Veh_4x4_Car_Door_R_01
+    SM_Veh_4x4_Car_Glass_01
+    SM_Veh_4x4_Car_Rear_Door_01
+    SM_Veh_4x4_Car_Rear_Seat_01
+    SM_Veh_4x4_Car_SteeringW_01
+    WheelMeshes
+      SM_Veh_4x4_Car_Wheel_fl_01
+      SM_Veh_4x4_Car_Wheel_fr_01
+      SM_Veh_4x4_Car_Wheel_rl_01
+      SM_Veh_4x4_Car_Wheel_rr_01    
+    WheelColliders
+      SM_Veh_4x4_Car_Wheel_fl_01
+      SM_Veh_4x4_Car_Wheel_fr_01
+      SM_Veh_4x4_Car_Wheel_rl_01
+      SM_Veh_4x4_Car_Wheel_rr_01   
+    View
+      Jeep01Camera
+  Jeep02
+    SM_Veh_4x4_Car_Door_L_01
+    SM_Veh_4x4_Car_Door_R_01
+    SM_Veh_4x4_Car_Glass_01
+    SM_Veh_4x4_Car_Rear_Door_01
+    SM_Veh_4x4_Car_Rear_Seat_01
+    SM_Veh_4x4_Car_SteeringW_01
+    WheelMeshes
+      SM_Veh_4x4_Car_Wheel_fl_01
+      SM_Veh_4x4_Car_Wheel_fr_01
+      SM_Veh_4x4_Car_Wheel_rl_01
+      SM_Veh_4x4_Car_Wheel_rr_01    
+    WheelColliders
+      SM_Veh_4x4_Car_Wheel_fl_01
+      SM_Veh_4x4_Car_Wheel_fr_01
+      SM_Veh_4x4_Car_Wheel_rl_01
+      SM_Veh_4x4_Car_Wheel_rr_01   
+    View
+      Jeep02Camera
+Interface
+  Canvas
+    Compass
+      Compass_DegreeText
+      Compass_Background
+      Compass_Foreground  
+    VehiclesSpeed
+      Jeep01Speedometer
+        Jeep01_SpeedoGuage
+        Jeep01_SpeedoNeedle
+        Jeep01_SpeedText
+      Jeep02Speedometer
+        Jeep02_SpeedoGuage
+        Jeep02_SpeedoNeedle
+        Jeep02_SpeedText
+    VehiclesEntry
+      Jeep01_EntryKey
+      Jeep02_EntryKey      
+EventSystem
+
+
+-----------------------------------------------------------------------------------
+
+Step 56: Identify: the next "Vehicle Prefab"
+
+-----------------------------------------------------------------------------------
+
+
+Let us first identify and locate the "Vehicle Prefab" we are going to use.
+
+Assets > PolygonExplorers > Prefabs > Vehicles
+
+SM_Veh_4x4_Car_01
+
+
+-----------------------------------------------------------------------------------
+
+Step 57: Add: the next "Vehicle Prefab" to Scene
+
+-----------------------------------------------------------------------------------
+
+
+Drag the mentioned "Vehicle Prefab" into the scene & unpack the prefab completely.
+
+Next, rename the vehicle prefabs:
+
+SM_Veh_4x4_Car_01 => "Jeep03"
+
+Next, set the Transform:
+
+Position: X: 3 Y: 0 Z: 0 
+Rotation: X: 0 Y: 0 Z: 0 
+Scale:    X: 1 Y: 1 Z: 1
+
+Material: PolygonExplorers_03_A
+
+Then move "Jeep03" into the empty: "Vehicles" as child of.
+
+
+-----------------------------------------------------------------------------------
+
+Step 58: Add: empty "View" as child
+
+-----------------------------------------------------------------------------------
+
+
+In "Jeep03" add empty as child named "View"
+
+Set the Transform of "View":
+
+Position: X: 0 Y: 0 Z: 0 
+Rotation: X: 0 Y: 0 Z: 0 
+Scale:    X: 1 Y: 1 Z: 1
+
+
+-----------------------------------------------------------------------------------
+
+Step 59: Add: "Camera" in empty "View" as child
+
+-----------------------------------------------------------------------------------
+
+
+In the empty: "View" add "Camera" component named: "Jeep03Camera"
+
+Tag: Untagged
+
+Depth: 0
+
+Set the Transform of "Jeep03Camera":
+
+Position: X: 0 Y: 1.64 Z: -6.4 
+Rotation: X: 0 Y: 0 Z: 0 
+Scale:    X: 1 Y: 1 Z: 1
+
+
+-----------------------------------------------------------------------------------
+
+Step 60: Add: empty "WheelMeshes" as child
+
+-----------------------------------------------------------------------------------
+
+
+In "Jeep03" add empty as child named "WheelMeshes"
+
+Set the Transform of "WheelMeshes":
+
+Position: X: 0 Y: 0 Z: 0 
+Rotation: X: 0 Y: 0 Z: 0 
+Scale:    X: 1 Y: 1 Z: 1
+
+Copy & paste the following meshes into "WheelMeshes" as children
+(delete originals after as they are not needed since we copied them into new
+location)
+
+SM_Veh_4x4_Car_Wheel_fl_01
+SM_Veh_4x4_Car_Wheel_fr_01
+SM_Veh_4x4_Car_Wheel_rl_01
+SM_Veh_4x4_Car_Wheel_rr_01
+
+Transforms should be fine and unaffected but, let us just mention them for
+good measure.
+
+SM_Veh_4x4_Car_Wheel_fl_01
+---------------------------
+
+Position: X: -0.8105161 Y: 0.4639312 Z: 1.305854
+Rotation: X: 0 Y: 0 Z: 0 
+Scale:    X: 1 Y: 1 Z: 1
+
+
+SM_Veh_4x4_Car_Wheel_fr_01
+---------------------------
+
+Position: X: 0.8105161 Y: 0.4639312 Z: 1.305854
+Rotation: X: 0 Y: 0 Z: 0 
+Scale:    X: 1 Y: 1 Z: 1
+
+
+SM_Veh_4x4_Car_Wheel_rl_01
+---------------------------
+
+Position: X: -0.9462859 Y: 0.4639312 Z: -1.2084
+Rotation: X: 0 Y: 0 Z: 0 
+Scale:    X: 1 Y: 1 Z: 1
+
+
+SM_Veh_4x4_Car_Wheel_rr_01
+---------------------------
+
+Position: X: 0.9462859 Y: 0.4639312 Z: -1.2084
+Rotation: X: 0 Y: 0 Z: 0 
+Scale:    X: 1 Y: 1 Z: 1
+
+
+-----------------------------------------------------------------------------------
+
+Step 61: Duplicate: empty "WheelMeshes" as "WheelColliders"
+
+-----------------------------------------------------------------------------------
+
+
+In "Jeep03" duplicate "WheelMeshes" & rename to "WheelColliders"
+
+Set the Transform of "WheelColliders":
+
+Position: X: 0 Y: 0 Z: 0 
+Rotation: X: 0 Y: 0 Z: 0 
+Scale:    X: 1 Y: 1 Z: 1
+
+
+Since you duplicated "WheelMeshes" & renamed to "WheelColliders" there should
+be the children already present with matching infos...
+
+SM_Veh_4x4_Car_Wheel_fl_01
+SM_Veh_4x4_Car_Wheel_fr_01
+SM_Veh_4x4_Car_Wheel_rl_01
+SM_Veh_4x4_Car_Wheel_rr_01
+
+
+Prior to the deletion of contents in WheelColliders if you desired to
+determine the wheel radius so as to eventually use with Wheel Colliders well,
+you could attach a Sphere Collider and gain Radius from that and then delete
+the sphere collider after as such would no longer be necessary but instead to
+avoid needing to do such I will provide that info so you do not necessarily
+need to do so.
+
+These details are important:
+
+
+Wheel Collider Radius: 0.4938253
+Wheel Collider Position: Y: 0.6139312 (0.4639312+0.15) *
+
+* Wheel colliders need +0.15 on the Y to function as intended as per
+  documentation
+
+In "WheelColliders" children: * (since all are already present in WheelMeshes
+and not needed for Wheel Colliders)
+
+* Delete Mesh Filter
+* Delete Mesh Renderer
+
+Add Component "Wheel Collider" to each:
+
+SM_Veh_4x4_Car_Wheel_fl_01
+SM_Veh_4x4_Car_Wheel_fr_01
+SM_Veh_4x4_Car_Wheel_rl_01
+SM_Veh_4x4_Car_Wheel_rr_01
+
+Set both front "Wheel Colliders" radius: 0.4938253
+Set both rear  "Wheel Colliders" radius: 0.4938253
+
+
+We will need to now edit these infos:
+
+
+SM_Veh_4x4_Car_Wheel_fl_01
+---------------------------
+
+Position: X: -0.8105161 Y: 0.6139312 Z: 1.305854
+Rotation: X: 0 Y: 0 Z: 0 
+Scale:    X: 1 Y: 1 Z: 1
+
+
+SM_Veh_4x4_Car_Wheel_fr_01
+---------------------------
+
+Position: X: 0.8105161 Y: 0.6139312 Z: 1.305854
+Rotation: X: 0 Y: 0 Z: 0 
+Scale:    X: 1 Y: 1 Z: 1
+
+
+SM_Veh_4x4_Car_Wheel_rl_01
+---------------------------
+
+Position: X: -0.9462859 Y: 0.6139312 Z: -1.2084
+Rotation: X: 0 Y: 0 Z: 0 
+Scale:    X: 1 Y: 1 Z: 1
+
+
+SM_Veh_4x4_Car_Wheel_rr_01
+---------------------------
+
+Position: X: 0.9462859 Y: 0.6139312 Z: -1.2084
+Rotation: X: 0 Y: 0 Z: 0 
+Scale:    X: 1 Y: 1 Z: 1
+
+
+-----------------------------------------------------------------------------------
+
+Notes: Current Summary
+
+-----------------------------------------------------------------------------------
+
+
+Note: Ok, by now your vehicle heirarchy should look like this:
+
+Mostly Collapsed:
+
+Vehicles
+  Jeep01
+    SM_Veh_4x4_Car_Door_L_01
+    SM_Veh_4x4_Car_Door_R_01
+    SM_Veh_4x4_Car_Glass_01
+    SM_Veh_4x4_Car_Rear_Door_01
+    SM_Veh_4x4_Car_Rear_Seat_01
+    SM_Veh_4x4_Car_SteeringW_01
+    WheelMeshes
+    WheelColliders   
+    View
+  Jeep02
+    SM_Veh_4x4_Car_Door_L_01
+    SM_Veh_4x4_Car_Door_R_01
+    SM_Veh_4x4_Car_Glass_01
+    SM_Veh_4x4_Car_Rear_Door_01
+    SM_Veh_4x4_Car_Rear_Seat_01
+    SM_Veh_4x4_Car_SteeringW_01
+    WheelMeshes
+    WheelColliders   
+    View
+  Jeep03
+    SM_Veh_4x4_Car_Door_L_01
+    SM_Veh_4x4_Car_Door_R_01
+    SM_Veh_4x4_Car_Glass_01
+    SM_Veh_4x4_Car_Rear_Door_01
+    SM_Veh_4x4_Car_Rear_Seat_01
+    SM_Veh_4x4_Car_SteeringW_01
+    WheelMeshes
+    WheelColliders   
+    View
+
+
+Fully Expanded:
+
+Vehicles
+  Jeep01
+    SM_Veh_4x4_Car_Door_L_01
+    SM_Veh_4x4_Car_Door_R_01
+    SM_Veh_4x4_Car_Glass_01
+    SM_Veh_4x4_Car_Rear_Door_01
+    SM_Veh_4x4_Car_Rear_Seat_01
+    SM_Veh_4x4_Car_SteeringW_01
+    WheelMeshes
+      SM_Veh_4x4_Car_Wheel_fl_01
+      SM_Veh_4x4_Car_Wheel_fr_01
+      SM_Veh_4x4_Car_Wheel_rl_01
+      SM_Veh_4x4_Car_Wheel_rr_01    
+    WheelColliders
+      SM_Veh_4x4_Car_Wheel_fl_01
+      SM_Veh_4x4_Car_Wheel_fr_01
+      SM_Veh_4x4_Car_Wheel_rl_01
+      SM_Veh_4x4_Car_Wheel_rr_01   
+    View
+      Jeep01Camera
+  Jeep02
+    SM_Veh_4x4_Car_Door_L_01
+    SM_Veh_4x4_Car_Door_R_01
+    SM_Veh_4x4_Car_Glass_01
+    SM_Veh_4x4_Car_Rear_Door_01
+    SM_Veh_4x4_Car_Rear_Seat_01
+    SM_Veh_4x4_Car_SteeringW_01
+    WheelMeshes
+      SM_Veh_4x4_Car_Wheel_fl_01
+      SM_Veh_4x4_Car_Wheel_fr_01
+      SM_Veh_4x4_Car_Wheel_rl_01
+      SM_Veh_4x4_Car_Wheel_rr_01    
+    WheelColliders
+      SM_Veh_4x4_Car_Wheel_fl_01
+      SM_Veh_4x4_Car_Wheel_fr_01
+      SM_Veh_4x4_Car_Wheel_rl_01
+      SM_Veh_4x4_Car_Wheel_rr_01   
+    View
+      Jeep02Camera
+  Jeep03
+    SM_Veh_4x4_Car_Door_L_01
+    SM_Veh_4x4_Car_Door_R_01
+    SM_Veh_4x4_Car_Glass_01
+    SM_Veh_4x4_Car_Rear_Door_01
+    SM_Veh_4x4_Car_Rear_Seat_01
+    SM_Veh_4x4_Car_SteeringW_01
+    WheelMeshes
+      SM_Veh_4x4_Car_Wheel_fl_01
+      SM_Veh_4x4_Car_Wheel_fr_01
+      SM_Veh_4x4_Car_Wheel_rl_01
+      SM_Veh_4x4_Car_Wheel_rr_01    
+    WheelColliders
+      SM_Veh_4x4_Car_Wheel_fl_01
+      SM_Veh_4x4_Car_Wheel_fr_01
+      SM_Veh_4x4_Car_Wheel_rl_01
+      SM_Veh_4x4_Car_Wheel_rr_01   
+    View
+      Jeep03Camera
+
+
+-----------------------------------------------------------------------------------
+
+Step 62: Add to: Jeep03 (Jeep03Controller.cs)
+
+-----------------------------------------------------------------------------------
+
+
+Attach component / script (Jeep03Controller.cs) to "Jeep03"
+
+Adjust the following settings:
+
+Require Components:
+-------------------
+
+Rigidbody: Jeep03 (Rigidbody)
+Mesh Collider: Jeep03 (Mesh Collider)
+
+Wheel Transforms:
+-----------------
+
+Front Left: SM_Veh_4x4_Car_Wheel_fl_01 (Transform)
+Front Right: SM_Veh_4x4_Car_Wheel_fr_01 (Transform)
+Rear Left: SM_Veh_4x4_Car_Wheel_rl_01 (Transform)
+Rear Right: SM_Veh_4x4_Car_Wheel_rr_01 (Transform)
+
+WheelColliders:
+---------------
+
+Front Left: SM_Veh_4x4_Car_Wheel_fl_01 (Wheel Collider)
+Front Right: SM_Veh_4x4_Car_Wheel_fr_01 (Wheel Collider)
+Rear Left: SM_Veh_4x4_Car_Wheel_rl_01 (Wheel Collider)
+Rear Right: SM_Veh_4x4_Car_Wheel_rr_01 (Wheel Collider)
+
+Rigidbody Mass:
+---------------
+
+Set Rigibody Mass: 2000
+
+
+Input Actions:
+--------------
+
+Car Controls: CarControls (Input Action Asset)
+
+
+-----------------------------------------------------------------------------------
+
+Step 63: Add to: Jeep03Camera (Jeep03Camera.cs)
+
+-----------------------------------------------------------------------------------
+
+
+Attach component / script (Jeep03Camera.cs) to "Jeep03Camera"
+
+
+Adjust Settings:
+
+Transforms:
+-----------
+
+Jeep03: Jeep03 (Transform)
+
+
+Distance: 6.4
+Height: 1.4
+
+
+You can keep settings as is or tweak them to your likings! *
+
+* ie: (tweak camera distance)
+* ie: (tweak camera height)
+
+Distance: 6.8
+Height: 2.2
+
+
+Note: You will find that later if you are opting to say add the compass, being
+able to adjust / tweak the distance and height of camera becomes very
+useful!
+
+
+-----------------------------------------------------------------------------------
+
+Step 64:  Create child of "VehiclesEntry" add Text tmp: "Jeep03_EntryKey"
+
+-----------------------------------------------------------------------------------
+
+Create as a child of "VehiclesEntry" add TextMeshPro Text: "Jeep03_EntryKey"
+
+Layer: "UI"
+
+
+Rect Transform: 
+---------------
+
+Set at "Top Center"
+
+Position: X: 0 Y: -50   Z: 0 
+Width: 100
+Height: 100
+
+
+Text Input: Drive [E]
+
+Font Size: 36
+
+Alignment: Center & Middle
+
+Face:
+-----
+Dilate: 0.21
+
+Outline: Yes Thickness: 0.121
+
+Underlay: Yes Softness: 0.522
+
+Note: The face, outline and underlay are merely starting suggestions that you
+can tweak further to your desired likings as well as any other related
+settings of the likes.
+
+Note: Lastly, disable this object as we do not want this to display prior to
+awake or start methods and to do this we will disable this object by default
+and then there is a wrapper in the script that will find the inactive item in
+start thus doing what will be needed. So yeah, make sure to disable this
+object in the editor.
+
+Ok, now that this part is done we can start moving to other setup steps...
+
+
+-----------------------------------------------------------------------------------
+
+Notes: Current Summary
+
+-----------------------------------------------------------------------------------
+
+
+Note: Ok, by now your vehicle heirarchy should look like this:
+
+Mostly Collapsed:
+
+Vehicles
+  Jeep01
+    SM_Veh_4x4_Car_Door_L_01
+    SM_Veh_4x4_Car_Door_R_01
+    SM_Veh_4x4_Car_Glass_01
+    SM_Veh_4x4_Car_Rear_Door_01
+    SM_Veh_4x4_Car_Rear_Seat_01
+    SM_Veh_4x4_Car_SteeringW_01
+    WheelMeshes
+    WheelColliders   
+    View
+  Jeep02
+    SM_Veh_4x4_Car_Door_L_01
+    SM_Veh_4x4_Car_Door_R_01
+    SM_Veh_4x4_Car_Glass_01
+    SM_Veh_4x4_Car_Rear_Door_01
+    SM_Veh_4x4_Car_Rear_Seat_01
+    SM_Veh_4x4_Car_SteeringW_01
+    WheelMeshes
+    WheelColliders   
+    View
+  Jeep03
+    SM_Veh_4x4_Car_Door_L_01
+    SM_Veh_4x4_Car_Door_R_01
+    SM_Veh_4x4_Car_Glass_01
+    SM_Veh_4x4_Car_Rear_Door_01
+    SM_Veh_4x4_Car_Rear_Seat_01
+    SM_Veh_4x4_Car_SteeringW_01
+    WheelMeshes
+    WheelColliders   
+    View
+Interface
+  Canvas
+    Compass
+    VehiclesSpeed    
+    VehiclesEntry
+EventSystem
+
+Fully Expanded:
+
+Vehicles
+  Jeep01
+    SM_Veh_4x4_Car_Door_L_01
+    SM_Veh_4x4_Car_Door_R_01
+    SM_Veh_4x4_Car_Glass_01
+    SM_Veh_4x4_Car_Rear_Door_01
+    SM_Veh_4x4_Car_Rear_Seat_01
+    SM_Veh_4x4_Car_SteeringW_01
+    WheelMeshes
+      SM_Veh_4x4_Car_Wheel_fl_01
+      SM_Veh_4x4_Car_Wheel_fr_01
+      SM_Veh_4x4_Car_Wheel_rl_01
+      SM_Veh_4x4_Car_Wheel_rr_01    
+    WheelColliders
+      SM_Veh_4x4_Car_Wheel_fl_01
+      SM_Veh_4x4_Car_Wheel_fr_01
+      SM_Veh_4x4_Car_Wheel_rl_01
+      SM_Veh_4x4_Car_Wheel_rr_01   
+    View
+      Jeep01Camera
+  Jeep02
+    SM_Veh_4x4_Car_Door_L_01
+    SM_Veh_4x4_Car_Door_R_01
+    SM_Veh_4x4_Car_Glass_01
+    SM_Veh_4x4_Car_Rear_Door_01
+    SM_Veh_4x4_Car_Rear_Seat_01
+    SM_Veh_4x4_Car_SteeringW_01
+    WheelMeshes
+      SM_Veh_4x4_Car_Wheel_fl_01
+      SM_Veh_4x4_Car_Wheel_fr_01
+      SM_Veh_4x4_Car_Wheel_rl_01
+      SM_Veh_4x4_Car_Wheel_rr_01    
+    WheelColliders
+      SM_Veh_4x4_Car_Wheel_fl_01
+      SM_Veh_4x4_Car_Wheel_fr_01
+      SM_Veh_4x4_Car_Wheel_rl_01
+      SM_Veh_4x4_Car_Wheel_rr_01   
+    View
+      Jeep02Camera
+  Jeep03
+    SM_Veh_4x4_Car_Door_L_01
+    SM_Veh_4x4_Car_Door_R_01
+    SM_Veh_4x4_Car_Glass_01
+    SM_Veh_4x4_Car_Rear_Door_01
+    SM_Veh_4x4_Car_Rear_Seat_01
+    SM_Veh_4x4_Car_SteeringW_01
+    WheelMeshes
+      SM_Veh_4x4_Car_Wheel_fl_01
+      SM_Veh_4x4_Car_Wheel_fr_01
+      SM_Veh_4x4_Car_Wheel_rl_01
+      SM_Veh_4x4_Car_Wheel_rr_01    
+    WheelColliders
+      SM_Veh_4x4_Car_Wheel_fl_01
+      SM_Veh_4x4_Car_Wheel_fr_01
+      SM_Veh_4x4_Car_Wheel_rl_01
+      SM_Veh_4x4_Car_Wheel_rr_01   
+    View
+      Jeep03Camera
+Interface
+  Canvas
+    Compass
+      Compass_DegreeText
+      Compass_Background
+      Compass_Foreground
+    VehiclesSpeed
+      Jeep01Speedometer
+        Jeep01_SpeedoGuage
+        Jeep01_SpeedoNeedle
+        Jeep01_SpeedText
+      Jeep02Speedometer
+        Jeep02_SpeedoGuage
+        Jeep02_SpeedoNeedle
+        Jeep02_SpeedText 
+    VehiclesEntry
+      Jeep01_EntryKey    
+      Jeep02_EntryKey
+      Jeep03_EntryKey      
+EventSystem
+
+
+-----------------------------------------------------------------------------------
+
+Notes: Current Summary
+
+-----------------------------------------------------------------------------------
+
+
+Note: Ok, by now your heirarchy should look like this:
+
+Mostly Collapsed:
+
+
+Environment
+  Directional Light
+  Terrain
+  Terrain Plane
+Player
+  View
+    Camera
+Vehicles
+  Jeep01
+    SM_Veh_4x4_Car_Door_L_01
+    SM_Veh_4x4_Car_Door_R_01
+    SM_Veh_4x4_Car_Glass_01
+    SM_Veh_4x4_Car_Rear_Door_01
+    SM_Veh_4x4_Car_Rear_Seat_01
+    SM_Veh_4x4_Car_SteeringW_01
+    WheelMeshes
+    WheelColliders   
+    View
+  Jeep02
+    SM_Veh_4x4_Car_Door_L_01
+    SM_Veh_4x4_Car_Door_R_01
+    SM_Veh_4x4_Car_Glass_01
+    SM_Veh_4x4_Car_Rear_Door_01
+    SM_Veh_4x4_Car_Rear_Seat_01
+    SM_Veh_4x4_Car_SteeringW_01
+    WheelMeshes
+    WheelColliders   
+    View
+  Jeep03
+    SM_Veh_4x4_Car_Door_L_01
+    SM_Veh_4x4_Car_Door_R_01
+    SM_Veh_4x4_Car_Glass_01
+    SM_Veh_4x4_Car_Rear_Door_01
+    SM_Veh_4x4_Car_Rear_Seat_01
+    SM_Veh_4x4_Car_SteeringW_01
+    WheelMeshes
+    WheelColliders   
+    View
+Interface
+  Canvas
+    Compass
+    VehiclesSpeed
+    VehiclesEntry
+EventSystem
+
+Fully Expanded:
+
+Environment
+  Directional Light
+  Terrain
+  Terrain Plane
+Player
+  View
+    Camera
+Vehicles
+  Jeep01
+    SM_Veh_4x4_Car_Door_L_01
+    SM_Veh_4x4_Car_Door_R_01
+    SM_Veh_4x4_Car_Glass_01
+    SM_Veh_4x4_Car_Rear_Door_01
+    SM_Veh_4x4_Car_Rear_Seat_01
+    SM_Veh_4x4_Car_SteeringW_01
+    WheelMeshes
+      SM_Veh_4x4_Car_Wheel_fl_01
+      SM_Veh_4x4_Car_Wheel_fr_01
+      SM_Veh_4x4_Car_Wheel_rl_01
+      SM_Veh_4x4_Car_Wheel_rr_01    
+    WheelColliders
+      SM_Veh_4x4_Car_Wheel_fl_01
+      SM_Veh_4x4_Car_Wheel_fr_01
+      SM_Veh_4x4_Car_Wheel_rl_01
+      SM_Veh_4x4_Car_Wheel_rr_01   
+    View
+      Jeep01Camera
+  Jeep02
+    SM_Veh_4x4_Car_Door_L_01
+    SM_Veh_4x4_Car_Door_R_01
+    SM_Veh_4x4_Car_Glass_01
+    SM_Veh_4x4_Car_Rear_Door_01
+    SM_Veh_4x4_Car_Rear_Seat_01
+    SM_Veh_4x4_Car_SteeringW_01
+    WheelMeshes
+      SM_Veh_4x4_Car_Wheel_fl_01
+      SM_Veh_4x4_Car_Wheel_fr_01
+      SM_Veh_4x4_Car_Wheel_rl_01
+      SM_Veh_4x4_Car_Wheel_rr_01    
+    WheelColliders
+      SM_Veh_4x4_Car_Wheel_fl_01
+      SM_Veh_4x4_Car_Wheel_fr_01
+      SM_Veh_4x4_Car_Wheel_rl_01
+      SM_Veh_4x4_Car_Wheel_rr_01   
+    View
+      Jeep02Camera
+  Jeep03
+    SM_Veh_4x4_Car_Door_L_01
+    SM_Veh_4x4_Car_Door_R_01
+    SM_Veh_4x4_Car_Glass_01
+    SM_Veh_4x4_Car_Rear_Door_01
+    SM_Veh_4x4_Car_Rear_Seat_01
+    SM_Veh_4x4_Car_SteeringW_01
+    WheelMeshes
+      SM_Veh_4x4_Car_Wheel_fl_01
+      SM_Veh_4x4_Car_Wheel_fr_01
+      SM_Veh_4x4_Car_Wheel_rl_01
+      SM_Veh_4x4_Car_Wheel_rr_01    
+    WheelColliders
+      SM_Veh_4x4_Car_Wheel_fl_01
+      SM_Veh_4x4_Car_Wheel_fr_01
+      SM_Veh_4x4_Car_Wheel_rl_01
+      SM_Veh_4x4_Car_Wheel_rr_01   
+    View
+      Jeep03Camera
+Interface
+  Canvas
+    Compass
+      Compass_DegreeText
+      Compass_Background
+      Compass_Foreground
+    VehiclesSpeed
+      Jeep01Speedometer
+        Jeep01_SpeedoGuage
+        Jeep01_SpeedoNeedle
+        Jeep01_SpeedText
+      Jeep02Speedometer
+        Jeep02_SpeedoGuage
+        Jeep02_SpeedoNeedle
+        Jeep02_SpeedText
+    VehiclesEntry
+      Jeep01_EntryKey    
+      Jeep02_EntryKey
+      Jeep03_EntryKey      
+EventSystem
+
+
+-----------------------------------------------------------------------------------
+
+Step 65: Add to: Jeep03 (Jeep03Entry.cs)
+
+-----------------------------------------------------------------------------------
+
+
+Attach component / script (Jeep03Entry.cs) to "Jeep03"
+
+Adjust the following settings:
+
+
+Game Objects:
+-------------
+
+Jeep03: Jeep03
+Player: Player
+InterfaceText Object: Jeep03_EntryKey
+
+
+In Box Collider:
+----------------
+
+Is Trigger: Yes
+
+Edit Collider: YES!* 
+
+* Edit the collider to be around the vehicle doors makings sure to extend the
+  collider a good bit out away from doors so as to allow for a good trigger
+  zone. Here is just an example that I suggest you tweak further to your
+  likings and needs:
+
+Center: X: 0.05843675 Y: 1.107235 Z: -0.05913931
+Size: X: 3.934733 Y: 1.711891 Z: 0.9941341
+
+
+Input Actions:
+--------------
+
+Car Controls: CarControls (Input Action Asset)
+
+
+-----------------------------------------------------------------------------------
+
+Step 66: In "VehiclesSpeed" create empty child: "Jeep03Speedometer"
+
+-----------------------------------------------------------------------------------
+
+
+In "Jeep03Speedometer"
+
+Adjust:
+
+Rect Transform:
+---------------
+
+Middle Center
+
+Width: 300
+Height: 300
+
+* something to note on placement: ok, when you add the script later in steps
+  you will notice an option in script settings for setting on choice of
+  either kph or mph in regards to SpeedText output, ok, with taking that into
+  account you can now possibly understand the following note about placement
+  of the interface items specific to such, mkay lets say that these setup
+  steps suggest setting all on the bottom left and that is because we are
+  using mph for the speed text output display thus such would make sense to
+  have speedometer and speed text on left bottom, but, ok, say you select kph
+  as speed text output, then it just might make sence to set the interface
+  items to the bottom right and that is why these suggestions are mentioned.
+  The choice is yours on that.
+
+
+-----------------------------------------------------------------------------------
+
+Step 67: In Interface > Canvas > VehiclesSpeed add UI IMG: "Jeep03_SpeedoGuage"
+
+-----------------------------------------------------------------------------------
+
+
+In: "Jeep03_SpeedoGuage"
+
+Adjust:
+
+Rect Transform:
+---------------
+
+Middle Center
+
+Width: 300
+Height: 300
+
+
+In: "Image"
+
+
+Source Image: Speedometer-Guage
+
+Color: (Suggested Hex) FFFFFF
+
+
+Note: Lastly, disable this object as we do not want this to display prior to
+awake or start methods and to do this we will disable this object by default
+and then there is a wrapper in the script that will find the inactive item in
+start thus doing what will be needed. So yeah, make sure to disable this
+object in the editor.
+
+
+-----------------------------------------------------------------------------------
+
+Step 68: In Interface > Canvas > VehiclesSpeed add IMG: "Jeep03_SpeedoNeedle"
+
+-----------------------------------------------------------------------------------
+
+
+In: "Jeep03_SpeedoNeedle"
+
+Adjust:
+
+Rect Transform:
+---------------
+
+Middle Center
+
+Pos Y: -24
+
+Width: 260
+Height: 260
+
+
+In: "Image"
+
+
+Source Image: Speedometer-Needle
+
+Color: (Suggested Hex) 6B3232
+
+
+Note: Lastly, disable this object as we do not want this to display prior to
+awake or start methods and to do this we will disable this object by default
+and then there is a wrapper in the script that will find the inactive item in
+start thus doing what will be needed. So yeah, make sure to disable this
+object in the editor.
+
+
+-----------------------------------------------------------------------------------
+
+Step 69: In Interface > Canvas > VehiclesSpeed add TMP TEXT: "Jeep03_SpeedText"
+
+-----------------------------------------------------------------------------------
+
+
+In: "Jeep03_SpeedText"
+
+Adjust:
+
+Rect Transform:
+---------------
+
+Middle Center
+
+Pos Y: -120.4
+
+Width: 200
+Height: 50
+
+Text Input:
+-----------
+
+0 mph
+
+
+Font Size: 36 *
+
+Vertex Color: (Suggested Hex) FFFFFF
+
+Alignment: Center Middle
+
+Face:
+Dilate: 0.21 *
+
+Outline: YES
+Thickness: 0.121 *
+
+Underlay: YES
+Dilate: 0.02 *
+Softness: 0.522 *
+
+* Note these are just suggestions for you then to tweak and adjust further to
+  your likings.
+
+
+Note: Lastly, disable this object as we do not want this to display prior to
+awake or start methods and to do this we will disable this object by default
+and then there is a wrapper in the script that will find the inactive item in
+start thus doing what will be needed. So yeah, make sure to disable this
+object in the editor.
+
+
+-----------------------------------------------------------------------------------
+
+Step 70: In Vehicles > Jeep03 attach script: (Jeep03Speedometer.cs)
+
+-----------------------------------------------------------------------------------
+
+
+Attach Jeep03Speedometer script: (Jeep03Speedometer.cs) to
+Vehicle: "Jeep03"
+
+In: "Jeep03" > Jeep03 Speedometer (Script)
+
+Adjust the minimal settings as far as what is min needed: (Needle IMG and
+Speed Text)
+
+Needle: Jeep03_SpeedoNeedle
+
+Speed Text: Jeep03_SpeedText (Text Mesh Pro UGUI)
+
+GameObjects:
+
+Interface Parent Object: Jeep03Speedometer
+Interface IMG01 Object: Jeep03_SpeedoGuage
+Interface IMG02 Object: Jeep03_SpeedoNeedle
+Interface Text Object: Jeep03_SpeedText
+
+Input Actions:
+--------------
+
+Car Controls: CarControls (Input Action Asset)
+
+
+-----------------------------------------------------------------------------------
+
+
+Note: Lastly, in case you missed this notice previously, we need to disable
+the listed objects found below as we do not want these objects to display
+prior to awake or start methods and to do this we will disable this object by
+default and then there is a wrapper in the script that will find the inactive
+item in start thus doing what will be needed. So yeah, make sure to disable
+this object in the editor.
+
+Game Objects:
+
+Jeep03Speedometer
+Jeep03_SpeedoGuage
+Jeep03_SpeedoNeedle
+Jeep03_SpeedText
+
+
+-----------------------------------------------------------------------------------
+
+Notes: Current Summary
+
+-----------------------------------------------------------------------------------
+
+
+Note: Ok, by now your heirarchy should look like this:
+
+Mostly Collapsed:
+
+
+Environment
+  Directional Light
+  Terrain
+  Terrain Plane
+Player
+  View
+    Camera
+Vehicles
+  Jeep01
+    SM_Veh_4x4_Car_Door_L_01
+    SM_Veh_4x4_Car_Door_R_01
+    SM_Veh_4x4_Car_Glass_01
+    SM_Veh_4x4_Car_Rear_Door_01
+    SM_Veh_4x4_Car_Rear_Seat_01
+    SM_Veh_4x4_Car_SteeringW_01
+    WheelMeshes
+    WheelColliders   
+    View
+  Jeep02
+    SM_Veh_4x4_Car_Door_L_01
+    SM_Veh_4x4_Car_Door_R_01
+    SM_Veh_4x4_Car_Glass_01
+    SM_Veh_4x4_Car_Rear_Door_01
+    SM_Veh_4x4_Car_Rear_Seat_01
+    SM_Veh_4x4_Car_SteeringW_01
+    WheelMeshes
+    WheelColliders   
+    View
+  Jeep03
+    SM_Veh_4x4_Car_Door_L_01
+    SM_Veh_4x4_Car_Door_R_01
+    SM_Veh_4x4_Car_Glass_01
+    SM_Veh_4x4_Car_Rear_Door_01
+    SM_Veh_4x4_Car_Rear_Seat_01
+    SM_Veh_4x4_Car_SteeringW_01
+    WheelMeshes
+    WheelColliders   
+    View
+Interface
+  Canvas
+    Compass
+    VehiclesSpeed
+    VehiclesEntry
+EventSystem
+
+Fully Expanded:
+
+Environment
+  Directional Light
+  Terrain
+  Terrain Plane
+Player
+  View
+    Camera
+Vehicles
+  Jeep01
+    SM_Veh_4x4_Car_Door_L_01
+    SM_Veh_4x4_Car_Door_R_01
+    SM_Veh_4x4_Car_Glass_01
+    SM_Veh_4x4_Car_Rear_Door_01
+    SM_Veh_4x4_Car_Rear_Seat_01
+    SM_Veh_4x4_Car_SteeringW_01
+    WheelMeshes
+      SM_Veh_4x4_Car_Wheel_fl_01
+      SM_Veh_4x4_Car_Wheel_fr_01
+      SM_Veh_4x4_Car_Wheel_rl_01
+      SM_Veh_4x4_Car_Wheel_rr_01    
+    WheelColliders
+      SM_Veh_4x4_Car_Wheel_fl_01
+      SM_Veh_4x4_Car_Wheel_fr_01
+      SM_Veh_4x4_Car_Wheel_rl_01
+      SM_Veh_4x4_Car_Wheel_rr_01   
+    View
+      Jeep01Camera
+  Jeep02
+    SM_Veh_4x4_Car_Door_L_01
+    SM_Veh_4x4_Car_Door_R_01
+    SM_Veh_4x4_Car_Glass_01
+    SM_Veh_4x4_Car_Rear_Door_01
+    SM_Veh_4x4_Car_Rear_Seat_01
+    SM_Veh_4x4_Car_SteeringW_01
+    WheelMeshes
+      SM_Veh_4x4_Car_Wheel_fl_01
+      SM_Veh_4x4_Car_Wheel_fr_01
+      SM_Veh_4x4_Car_Wheel_rl_01
+      SM_Veh_4x4_Car_Wheel_rr_01    
+    WheelColliders
+      SM_Veh_4x4_Car_Wheel_fl_01
+      SM_Veh_4x4_Car_Wheel_fr_01
+      SM_Veh_4x4_Car_Wheel_rl_01
+      SM_Veh_4x4_Car_Wheel_rr_01   
+    View
+      Jeep02Camera
+  Jeep03
+    SM_Veh_4x4_Car_Door_L_01
+    SM_Veh_4x4_Car_Door_R_01
+    SM_Veh_4x4_Car_Glass_01
+    SM_Veh_4x4_Car_Rear_Door_01
+    SM_Veh_4x4_Car_Rear_Seat_01
+    SM_Veh_4x4_Car_SteeringW_01
+    WheelMeshes
+      SM_Veh_4x4_Car_Wheel_fl_01
+      SM_Veh_4x4_Car_Wheel_fr_01
+      SM_Veh_4x4_Car_Wheel_rl_01
+      SM_Veh_4x4_Car_Wheel_rr_01    
+    WheelColliders
+      SM_Veh_4x4_Car_Wheel_fl_01
+      SM_Veh_4x4_Car_Wheel_fr_01
+      SM_Veh_4x4_Car_Wheel_rl_01
+      SM_Veh_4x4_Car_Wheel_rr_01   
+    View
+      Jeep03Camera
+Interface
+  Canvas
+    Compass
+      Compass_DegreeText
+      Compass_Background
+      Compass_Foreground  
+    VehiclesSpeed
+      Jeep01Speedometer
+        Jeep01_SpeedoGuage
+        Jeep01_SpeedoNeedle
+        Jeep01_SpeedText
+      Jeep02Speedometer
+        Jeep02_SpeedoGuage
+        Jeep02_SpeedoNeedle
+        Jeep02_SpeedText
+      Jeep03Speedometer
+        Jeep03_SpeedoGuage
+        Jeep03_SpeedoNeedle
+        Jeep03_SpeedText
+    VehiclesEntry
+      Jeep01_EntryKey
+      Jeep02_EntryKey
+      Jeep03_EntryKey           
+EventSystem
+
+
+-----------------------------------------------------------------------------------
+
+
+NEXT: We add the third vehicle compass
+
+
+------------------------------------------------------------------------------------
+
+Step 71: Add: Component / Script: Jeep03Compass.cs
+
+------------------------------------------------------------------------------------
+
+
+71.A) Go back to: Interface -> Canvas -> Compass
+     
+     Add component / script: "Jeep03Compass.cs"
+
+71.B) Ok, now fill out the related settings:
+
+For -> Jeep03Compass (Script):
+---------------------------------------
+
+Script: Jeep03Compass.cs
+Compass Foreground: Compass_Foreground (Raw Image)
+Compass Background: Compass_Background (Raw Image)
+Jeep03: Jeep03 (Transform)
+Compass Direction: Compass_DegreeText (Text Mesh Pro)
+Compass Enabled: Uncheck this 
+
+
+------------------------------------------------------------------------------------
+
+Step 72: Edit Settings in: Jeep03Entry (Script)
+
+------------------------------------------------------------------------------------
+
+
+Compass
+-------
+
+Player Compass: Compass (Player Compass)
+Jeep 03 Compass: Compass (Jeep 03 Compass)
+
+
+----------------------------------------------------------------------------------------
+
+
+FINAL NOTE: In your vehicle camera (script) you may need or opt or
+not to adjust some settings to suit your likings more say things like for
+example: Distance, height, field of view, etc, etc... This is entirely up to
+you if you desire to do such or not...
+
+
+-----------------------------------------------------------------------------------
+
+Notes: Current Summary
+
+-----------------------------------------------------------------------------------
+
+
+Note: Ok, by now your heirarchy should look like this:
+
+Mostly Collapsed:
+
+
+Environment
+  Directional Light
+  Terrain
+  Terrain Plane
+Player
+  View
+    Camera
+Vehicles
+  Jeep01
+    SM_Veh_4x4_Car_Door_L_01
+    SM_Veh_4x4_Car_Door_R_01
+    SM_Veh_4x4_Car_Glass_01
+    SM_Veh_4x4_Car_Rear_Door_01
+    SM_Veh_4x4_Car_Rear_Seat_01
+    SM_Veh_4x4_Car_SteeringW_01
+    WheelMeshes
+    WheelColliders   
+    View
+  Jeep02
+    SM_Veh_4x4_Car_Door_L_01
+    SM_Veh_4x4_Car_Door_R_01
+    SM_Veh_4x4_Car_Glass_01
+    SM_Veh_4x4_Car_Rear_Door_01
+    SM_Veh_4x4_Car_Rear_Seat_01
+    SM_Veh_4x4_Car_SteeringW_01
+    WheelMeshes
+    WheelColliders   
+    View
+  Jeep03
+    SM_Veh_4x4_Car_Door_L_01
+    SM_Veh_4x4_Car_Door_R_01
+    SM_Veh_4x4_Car_Glass_01
+    SM_Veh_4x4_Car_Rear_Door_01
+    SM_Veh_4x4_Car_Rear_Seat_01
+    SM_Veh_4x4_Car_SteeringW_01
+    WheelMeshes
+    WheelColliders   
+    View
+Interface
+  Canvas
+    Compass
+    VehiclesSpeed
+    VehiclesEntry
+EventSystem
+
+Fully Expanded:
+
+Environment
+  Directional Light
+  Terrain
+  Terrain Plane
+Player
+  View
+    Camera
+Vehicles
+  Jeep01
+    SM_Veh_4x4_Car_Door_L_01
+    SM_Veh_4x4_Car_Door_R_01
+    SM_Veh_4x4_Car_Glass_01
+    SM_Veh_4x4_Car_Rear_Door_01
+    SM_Veh_4x4_Car_Rear_Seat_01
+    SM_Veh_4x4_Car_SteeringW_01
+    WheelMeshes
+      SM_Veh_4x4_Car_Wheel_fl_01
+      SM_Veh_4x4_Car_Wheel_fr_01
+      SM_Veh_4x4_Car_Wheel_rl_01
+      SM_Veh_4x4_Car_Wheel_rr_01    
+    WheelColliders
+      SM_Veh_4x4_Car_Wheel_fl_01
+      SM_Veh_4x4_Car_Wheel_fr_01
+      SM_Veh_4x4_Car_Wheel_rl_01
+      SM_Veh_4x4_Car_Wheel_rr_01   
+    View
+      Jeep01Camera
+  Jeep02
+    SM_Veh_4x4_Car_Door_L_01
+    SM_Veh_4x4_Car_Door_R_01
+    SM_Veh_4x4_Car_Glass_01
+    SM_Veh_4x4_Car_Rear_Door_01
+    SM_Veh_4x4_Car_Rear_Seat_01
+    SM_Veh_4x4_Car_SteeringW_01
+    WheelMeshes
+      SM_Veh_4x4_Car_Wheel_fl_01
+      SM_Veh_4x4_Car_Wheel_fr_01
+      SM_Veh_4x4_Car_Wheel_rl_01
+      SM_Veh_4x4_Car_Wheel_rr_01    
+    WheelColliders
+      SM_Veh_4x4_Car_Wheel_fl_01
+      SM_Veh_4x4_Car_Wheel_fr_01
+      SM_Veh_4x4_Car_Wheel_rl_01
+      SM_Veh_4x4_Car_Wheel_rr_01   
+    View
+      Jeep02Camera
+  Jeep03
+    SM_Veh_4x4_Car_Door_L_01
+    SM_Veh_4x4_Car_Door_R_01
+    SM_Veh_4x4_Car_Glass_01
+    SM_Veh_4x4_Car_Rear_Door_01
+    SM_Veh_4x4_Car_Rear_Seat_01
+    SM_Veh_4x4_Car_SteeringW_01
+    WheelMeshes
+      SM_Veh_4x4_Car_Wheel_fl_01
+      SM_Veh_4x4_Car_Wheel_fr_01
+      SM_Veh_4x4_Car_Wheel_rl_01
+      SM_Veh_4x4_Car_Wheel_rr_01    
+    WheelColliders
+      SM_Veh_4x4_Car_Wheel_fl_01
+      SM_Veh_4x4_Car_Wheel_fr_01
+      SM_Veh_4x4_Car_Wheel_rl_01
+      SM_Veh_4x4_Car_Wheel_rr_01   
+    View
+      Jeep03Camera
+Interface
+  Canvas
+    Compass
+      Compass_DegreeText
+      Compass_Background
+      Compass_Foreground  
+    VehiclesSpeed
+      Jeep01Speedometer
+        Jeep01_SpeedoGuage
+        Jeep01_SpeedoNeedle
+        Jeep01_SpeedText
+      Jeep02Speedometer
+        Jeep02_SpeedoGuage
+        Jeep02_SpeedoNeedle
+        Jeep02_SpeedText
+      Jeep03Speedometer
+        Jeep03_SpeedoGuage
+        Jeep03_SpeedoNeedle
+        Jeep03_SpeedText
+    VehiclesEntry
+      Jeep01_EntryKey
+      Jeep02_EntryKey
+      Jeep03_EntryKey           
+EventSystem
+
+
+-----------------------------------------------------------------------------------
+
+Step 73: Identify: the next "Vehicle Prefab"
+
+-----------------------------------------------------------------------------------
+
+
+Let us first identify and locate the "Vehicle Prefab" we are going to use.
+
+Assets > PolygonExplorers > Prefabs > Vehicles
+
+SM_Veh_4x4_Car_01
+
+
+-----------------------------------------------------------------------------------
+
+Step 74: Add: the next "Vehicle Prefab" to Scene
+
+-----------------------------------------------------------------------------------
+
+
+Drag the mentioned "Vehicle Prefab" into the scene & unpack the prefab completely.
+
+Next, rename the vehicle prefabs:
+
+SM_Veh_4x4_Car_01 => "Jeep04"
+
+Next, set the Transform:
+
+Position: X: 9 Y: 0 Z: 0 
+Rotation: X: 0 Y: 0 Z: 0 
+Scale:    X: 1 Y: 1 Z: 1
+
+Material: PolygonExplorers_04_A
+
+Then move "Jeep04" into the empty: "Vehicles" as child of.
+
+
+-----------------------------------------------------------------------------------
+
+Step 75: Add: empty "View" as child
+
+-----------------------------------------------------------------------------------
+
+
+In "Jeep04" add empty as child named "View"
+
+Set the Transform of "View":
+
+Position: X: 0 Y: 0 Z: 0 
+Rotation: X: 0 Y: 0 Z: 0 
+Scale:    X: 1 Y: 1 Z: 1
+
+
+-----------------------------------------------------------------------------------
+
+Step 76: Add: "Camera" in empty "View" as child
+
+-----------------------------------------------------------------------------------
+
+
+In the empty: "View" add "Camera" component named: "Jeep04Camera"
+
+Tag: Untagged
+
+Depth: 0
+
+Set the Transform of "Jeep04Camera":
+
+Position: X: 0 Y: 1.64 Z: -6.4 
+Rotation: X: 0 Y: 0 Z: 0 
+Scale:    X: 1 Y: 1 Z: 1
+
+
+-----------------------------------------------------------------------------------
+
+Step 77: Add: empty "WheelMeshes" as child
+
+-----------------------------------------------------------------------------------
+
+
+In "Jeep04" add empty as child named "WheelMeshes"
+
+Set the Transform of "WheelMeshes":
+
+Position: X: 0 Y: 0 Z: 0 
+Rotation: X: 0 Y: 0 Z: 0 
+Scale:    X: 1 Y: 1 Z: 1
+
+Copy & paste the following meshes into "WheelMeshes" as children
+(delete originals after as they are not needed since we copied them into new
+location)
+
+SM_Veh_4x4_Car_Wheel_fl_01
+SM_Veh_4x4_Car_Wheel_fr_01
+SM_Veh_4x4_Car_Wheel_rl_01
+SM_Veh_4x4_Car_Wheel_rr_01
+
+Transforms should be fine and unaffected but, let us just mention them for
+good measure.
+
+SM_Veh_4x4_Car_Wheel_fl_01
+---------------------------
+
+Position: X: -0.8105161 Y: 0.4639312 Z: 1.305854
+Rotation: X: 0 Y: 0 Z: 0 
+Scale:    X: 1 Y: 1 Z: 1
+
+
+SM_Veh_4x4_Car_Wheel_fr_01
+---------------------------
+
+Position: X: 0.8105161 Y: 0.4639312 Z: 1.305854
+Rotation: X: 0 Y: 0 Z: 0 
+Scale:    X: 1 Y: 1 Z: 1
+
+
+SM_Veh_4x4_Car_Wheel_rl_01
+---------------------------
+
+Position: X: -0.9462859 Y: 0.4639312 Z: -1.2084
+Rotation: X: 0 Y: 0 Z: 0 
+Scale:    X: 1 Y: 1 Z: 1
+
+
+SM_Veh_4x4_Car_Wheel_rr_01
+---------------------------
+
+Position: X: 0.9462859 Y: 0.4639312 Z: -1.2084
+Rotation: X: 0 Y: 0 Z: 0 
+Scale:    X: 1 Y: 1 Z: 1
+
+
+-----------------------------------------------------------------------------------
+
+Step 78: Duplicate: empty "WheelMeshes" as "WheelColliders"
+
+-----------------------------------------------------------------------------------
+
+
+In "Jeep04" duplicate "WheelMeshes" & rename to "WheelColliders"
+
+Set the Transform of "WheelColliders":
+
+Position: X: 0 Y: 0 Z: 0 
+Rotation: X: 0 Y: 0 Z: 0 
+Scale:    X: 1 Y: 1 Z: 1
+
+
+Since you duplicated "WheelMeshes" & renamed to "WheelColliders" there should
+be the children already present with matching infos...
+
+SM_Veh_4x4_Car_Wheel_fl_01
+SM_Veh_4x4_Car_Wheel_fr_01
+SM_Veh_4x4_Car_Wheel_rl_01
+SM_Veh_4x4_Car_Wheel_rr_01
+
+
+Prior to the deletion of contents in WheelColliders if you desired to
+determine the wheel radius so as to eventually use with Wheel Colliders well,
+you could attach a Sphere Collider and gain Radius from that and then delete
+the sphere collider after as such would no longer be necessary but instead to
+avoid needing to do such I will provide that info so you do not necessarily
+need to do so.
+
+These details are important:
+
+
+Wheel Collider Radius: 0.4938253
+Wheel Collider Position: Y: 0.6139312 (0.4639312+0.15) *
+
+* Wheel colliders need +0.15 on the Y to function as intended as per
+  documentation
+
+In "WheelColliders" children: * (since all are already present in WheelMeshes
+and not needed for Wheel Colliders)
+
+* Delete Mesh Filter
+* Delete Mesh Renderer
+
+Add Component "Wheel Collider" to each:
+
+SM_Veh_4x4_Car_Wheel_fl_01
+SM_Veh_4x4_Car_Wheel_fr_01
+SM_Veh_4x4_Car_Wheel_rl_01
+SM_Veh_4x4_Car_Wheel_rr_01
+
+Set both front "Wheel Colliders" radius: 0.4938253
+Set both rear  "Wheel Colliders" radius: 0.4938253
+
+
+We will need to now edit these infos:
+
+
+SM_Veh_4x4_Car_Wheel_fl_01
+---------------------------
+
+Position: X: -0.8105161 Y: 0.6139312 Z: 1.305854
+Rotation: X: 0 Y: 0 Z: 0 
+Scale:    X: 1 Y: 1 Z: 1
+
+
+SM_Veh_4x4_Car_Wheel_fr_01
+---------------------------
+
+Position: X: 0.8105161 Y: 0.6139312 Z: 1.305854
+Rotation: X: 0 Y: 0 Z: 0 
+Scale:    X: 1 Y: 1 Z: 1
+
+
+SM_Veh_4x4_Car_Wheel_rl_01
+---------------------------
+
+Position: X: -0.9462859 Y: 0.6139312 Z: -1.2084
+Rotation: X: 0 Y: 0 Z: 0 
+Scale:    X: 1 Y: 1 Z: 1
+
+
+SM_Veh_4x4_Car_Wheel_rr_01
+---------------------------
+
+Position: X: 0.9462859 Y: 0.6139312 Z: -1.2084
+Rotation: X: 0 Y: 0 Z: 0 
+Scale:    X: 1 Y: 1 Z: 1
+
+
+-----------------------------------------------------------------------------------
+
+Notes: Current Summary
+
+-----------------------------------------------------------------------------------
+
+
+Note: Ok, by now your vehicle heirarchy should look like this:
+
+Mostly Collapsed:
+
+Vehicles
+  Jeep01
+    SM_Veh_4x4_Car_Door_L_01
+    SM_Veh_4x4_Car_Door_R_01
+    SM_Veh_4x4_Car_Glass_01
+    SM_Veh_4x4_Car_Rear_Door_01
+    SM_Veh_4x4_Car_Rear_Seat_01
+    SM_Veh_4x4_Car_SteeringW_01
+    WheelMeshes
+    WheelColliders   
+    View
+  Jeep02
+    SM_Veh_4x4_Car_Door_L_01
+    SM_Veh_4x4_Car_Door_R_01
+    SM_Veh_4x4_Car_Glass_01
+    SM_Veh_4x4_Car_Rear_Door_01
+    SM_Veh_4x4_Car_Rear_Seat_01
+    SM_Veh_4x4_Car_SteeringW_01
+    WheelMeshes
+    WheelColliders   
+    View
+  Jeep03
+    SM_Veh_4x4_Car_Door_L_01
+    SM_Veh_4x4_Car_Door_R_01
+    SM_Veh_4x4_Car_Glass_01
+    SM_Veh_4x4_Car_Rear_Door_01
+    SM_Veh_4x4_Car_Rear_Seat_01
+    SM_Veh_4x4_Car_SteeringW_01
+    WheelMeshes
+    WheelColliders   
+    View
+  Jeep04
+    SM_Veh_4x4_Car_Door_L_01
+    SM_Veh_4x4_Car_Door_R_01
+    SM_Veh_4x4_Car_Glass_01
+    SM_Veh_4x4_Car_Rear_Door_01
+    SM_Veh_4x4_Car_Rear_Seat_01
+    SM_Veh_4x4_Car_SteeringW_01
+    WheelMeshes
+    WheelColliders   
+    View
+
+
+Fully Expanded:
+
+Vehicles
+  Jeep01
+    SM_Veh_4x4_Car_Door_L_01
+    SM_Veh_4x4_Car_Door_R_01
+    SM_Veh_4x4_Car_Glass_01
+    SM_Veh_4x4_Car_Rear_Door_01
+    SM_Veh_4x4_Car_Rear_Seat_01
+    SM_Veh_4x4_Car_SteeringW_01
+    WheelMeshes
+      SM_Veh_4x4_Car_Wheel_fl_01
+      SM_Veh_4x4_Car_Wheel_fr_01
+      SM_Veh_4x4_Car_Wheel_rl_01
+      SM_Veh_4x4_Car_Wheel_rr_01    
+    WheelColliders
+      SM_Veh_4x4_Car_Wheel_fl_01
+      SM_Veh_4x4_Car_Wheel_fr_01
+      SM_Veh_4x4_Car_Wheel_rl_01
+      SM_Veh_4x4_Car_Wheel_rr_01   
+    View
+      Jeep01Camera
+  Jeep02
+    SM_Veh_4x4_Car_Door_L_01
+    SM_Veh_4x4_Car_Door_R_01
+    SM_Veh_4x4_Car_Glass_01
+    SM_Veh_4x4_Car_Rear_Door_01
+    SM_Veh_4x4_Car_Rear_Seat_01
+    SM_Veh_4x4_Car_SteeringW_01
+    WheelMeshes
+      SM_Veh_4x4_Car_Wheel_fl_01
+      SM_Veh_4x4_Car_Wheel_fr_01
+      SM_Veh_4x4_Car_Wheel_rl_01
+      SM_Veh_4x4_Car_Wheel_rr_01    
+    WheelColliders
+      SM_Veh_4x4_Car_Wheel_fl_01
+      SM_Veh_4x4_Car_Wheel_fr_01
+      SM_Veh_4x4_Car_Wheel_rl_01
+      SM_Veh_4x4_Car_Wheel_rr_01   
+    View
+      Jeep02Camera
+  Jeep03
+    SM_Veh_4x4_Car_Door_L_01
+    SM_Veh_4x4_Car_Door_R_01
+    SM_Veh_4x4_Car_Glass_01
+    SM_Veh_4x4_Car_Rear_Door_01
+    SM_Veh_4x4_Car_Rear_Seat_01
+    SM_Veh_4x4_Car_SteeringW_01
+    WheelMeshes
+      SM_Veh_4x4_Car_Wheel_fl_01
+      SM_Veh_4x4_Car_Wheel_fr_01
+      SM_Veh_4x4_Car_Wheel_rl_01
+      SM_Veh_4x4_Car_Wheel_rr_01    
+    WheelColliders
+      SM_Veh_4x4_Car_Wheel_fl_01
+      SM_Veh_4x4_Car_Wheel_fr_01
+      SM_Veh_4x4_Car_Wheel_rl_01
+      SM_Veh_4x4_Car_Wheel_rr_01   
+    View
+      Jeep03Camera
+  Jeep04
+    SM_Veh_4x4_Car_Door_L_01
+    SM_Veh_4x4_Car_Door_R_01
+    SM_Veh_4x4_Car_Glass_01
+    SM_Veh_4x4_Car_Rear_Door_01
+    SM_Veh_4x4_Car_Rear_Seat_01
+    SM_Veh_4x4_Car_SteeringW_01
+    WheelMeshes
+      SM_Veh_4x4_Car_Wheel_fl_01
+      SM_Veh_4x4_Car_Wheel_fr_01
+      SM_Veh_4x4_Car_Wheel_rl_01
+      SM_Veh_4x4_Car_Wheel_rr_01    
+    WheelColliders
+      SM_Veh_4x4_Car_Wheel_fl_01
+      SM_Veh_4x4_Car_Wheel_fr_01
+      SM_Veh_4x4_Car_Wheel_rl_01
+      SM_Veh_4x4_Car_Wheel_rr_01   
+    View
+      Jeep04Camera
+
+
+-----------------------------------------------------------------------------------
+
+Step 79: Add to: Jeep04 (Jeep04Controller.cs)
+
+-----------------------------------------------------------------------------------
+
+
+Attach component / script (Jeep04Controller.cs) to "Jeep04"
+
+Adjust the following settings:
+
+Require Components:
+-------------------
+
+Rigidbody: Jeep04 (Rigidbody)
+Mesh Collider: Jeep04 (Mesh Collider)
+
+Wheel Transforms:
+-----------------
+
+Front Left: SM_Veh_4x4_Car_Wheel_fl_01 (Transform)
+Front Right: SM_Veh_4x4_Car_Wheel_fr_01 (Transform)
+Rear Left: SM_Veh_4x4_Car_Wheel_rl_01 (Transform)
+Rear Right: SM_Veh_4x4_Car_Wheel_rr_01 (Transform)
+
+WheelColliders:
+---------------
+
+Front Left: SM_Veh_4x4_Car_Wheel_fl_01 (Wheel Collider)
+Front Right: SM_Veh_4x4_Car_Wheel_fr_01 (Wheel Collider)
+Rear Left: SM_Veh_4x4_Car_Wheel_rl_01 (Wheel Collider)
+Rear Right: SM_Veh_4x4_Car_Wheel_rr_01 (Wheel Collider)
+
+Rigidbody Mass:
+---------------
+
+Set Rigibody Mass: 2000
+
+
+Input Actions:
+--------------
+
+Car Controls: CarControls (Input Action Asset)
+
+
+-----------------------------------------------------------------------------------
+
+Step 80: Add to: Jeep04Camera (Jeep04Camera.cs)
+
+-----------------------------------------------------------------------------------
+
+
+Attach component / script (Jeep04Camera.cs) to "Jeep04Camera"
+
+
+Adjust Settings:
+
+Transforms:
+-----------
+
+Jeep04: Jeep04 (Transform)
+
+
+Distance: 6.4
+Height: 1.4
+
+
+You can keep settings as is or tweak them to your likings! *
+
+* ie: (tweak camera distance)
+* ie: (tweak camera height)
+
+Distance: 6.8
+Height: 2.2
+
+
+Note: You will find that later if you are opting to say add the compass, being
+able to adjust / tweak the distance and height of camera becomes very
+useful!
+
+
+-----------------------------------------------------------------------------------
+
+Step 81:  Create child of "VehiclesEntry" add Text tmp: "Jeep04_EntryKey"
+
+-----------------------------------------------------------------------------------
+
+Create as a child of "VehiclesEntry" add TextMeshPro Text: "Jeep04_EntryKey"
+
+Layer: "UI"
+
+
+Rect Transform: 
+---------------
+
+Set at "Top Center"
+
+Position: X: 0 Y: -50   Z: 0 
+Width: 100
+Height: 100
+
+
+Text Input: Drive [E]
+
+Font Size: 36
+
+Alignment: Center & Middle
+
+Face:
+-----
+Dilate: 0.21
+
+Outline: Yes Thickness: 0.121
+
+Underlay: Yes Softness: 0.522
+
+Note: The face, outline and underlay are merely starting suggestions that you
+can tweak further to your desired likings as well as any other related
+settings of the likes.
+
+Note: Lastly, disable this object as we do not want this to display prior to
+awake or start methods and to do this we will disable this object by default
+and then there is a wrapper in the script that will find the inactive item in
+start thus doing what will be needed. So yeah, make sure to disable this
+object in the editor.
+
+Ok, now that this part is done we can start moving to other setup steps...
+
+
+-----------------------------------------------------------------------------------
+
+Notes: Current Summary
+
+-----------------------------------------------------------------------------------
+
+
+Note: Ok, by now your vehicle heirarchy should look like this:
+
+Mostly Collapsed:
+
+Vehicles
+  Jeep01
+    SM_Veh_4x4_Car_Door_L_01
+    SM_Veh_4x4_Car_Door_R_01
+    SM_Veh_4x4_Car_Glass_01
+    SM_Veh_4x4_Car_Rear_Door_01
+    SM_Veh_4x4_Car_Rear_Seat_01
+    SM_Veh_4x4_Car_SteeringW_01
+    WheelMeshes
+    WheelColliders   
+    View
+  Jeep02
+    SM_Veh_4x4_Car_Door_L_01
+    SM_Veh_4x4_Car_Door_R_01
+    SM_Veh_4x4_Car_Glass_01
+    SM_Veh_4x4_Car_Rear_Door_01
+    SM_Veh_4x4_Car_Rear_Seat_01
+    SM_Veh_4x4_Car_SteeringW_01
+    WheelMeshes
+    WheelColliders   
+    View
+  Jeep03
+    SM_Veh_4x4_Car_Door_L_01
+    SM_Veh_4x4_Car_Door_R_01
+    SM_Veh_4x4_Car_Glass_01
+    SM_Veh_4x4_Car_Rear_Door_01
+    SM_Veh_4x4_Car_Rear_Seat_01
+    SM_Veh_4x4_Car_SteeringW_01
+    WheelMeshes
+    WheelColliders   
+    View
+  Jeep04
+    SM_Veh_4x4_Car_Door_L_01
+    SM_Veh_4x4_Car_Door_R_01
+    SM_Veh_4x4_Car_Glass_01
+    SM_Veh_4x4_Car_Rear_Door_01
+    SM_Veh_4x4_Car_Rear_Seat_01
+    SM_Veh_4x4_Car_SteeringW_01
+    WheelMeshes
+    WheelColliders   
+    View    
+Interface
+  Canvas
+    Compass
+    VehiclesSpeed    
+    VehiclesEntry
+EventSystem
+
+Fully Expanded:
+
+Vehicles
+  Jeep01
+    SM_Veh_4x4_Car_Door_L_01
+    SM_Veh_4x4_Car_Door_R_01
+    SM_Veh_4x4_Car_Glass_01
+    SM_Veh_4x4_Car_Rear_Door_01
+    SM_Veh_4x4_Car_Rear_Seat_01
+    SM_Veh_4x4_Car_SteeringW_01
+    WheelMeshes
+      SM_Veh_4x4_Car_Wheel_fl_01
+      SM_Veh_4x4_Car_Wheel_fr_01
+      SM_Veh_4x4_Car_Wheel_rl_01
+      SM_Veh_4x4_Car_Wheel_rr_01    
+    WheelColliders
+      SM_Veh_4x4_Car_Wheel_fl_01
+      SM_Veh_4x4_Car_Wheel_fr_01
+      SM_Veh_4x4_Car_Wheel_rl_01
+      SM_Veh_4x4_Car_Wheel_rr_01   
+    View
+      Jeep01Camera
+  Jeep02
+    SM_Veh_4x4_Car_Door_L_01
+    SM_Veh_4x4_Car_Door_R_01
+    SM_Veh_4x4_Car_Glass_01
+    SM_Veh_4x4_Car_Rear_Door_01
+    SM_Veh_4x4_Car_Rear_Seat_01
+    SM_Veh_4x4_Car_SteeringW_01
+    WheelMeshes
+      SM_Veh_4x4_Car_Wheel_fl_01
+      SM_Veh_4x4_Car_Wheel_fr_01
+      SM_Veh_4x4_Car_Wheel_rl_01
+      SM_Veh_4x4_Car_Wheel_rr_01    
+    WheelColliders
+      SM_Veh_4x4_Car_Wheel_fl_01
+      SM_Veh_4x4_Car_Wheel_fr_01
+      SM_Veh_4x4_Car_Wheel_rl_01
+      SM_Veh_4x4_Car_Wheel_rr_01   
+    View
+      Jeep02Camera
+  Jeep03
+    SM_Veh_4x4_Car_Door_L_01
+    SM_Veh_4x4_Car_Door_R_01
+    SM_Veh_4x4_Car_Glass_01
+    SM_Veh_4x4_Car_Rear_Door_01
+    SM_Veh_4x4_Car_Rear_Seat_01
+    SM_Veh_4x4_Car_SteeringW_01
+    WheelMeshes
+      SM_Veh_4x4_Car_Wheel_fl_01
+      SM_Veh_4x4_Car_Wheel_fr_01
+      SM_Veh_4x4_Car_Wheel_rl_01
+      SM_Veh_4x4_Car_Wheel_rr_01    
+    WheelColliders
+      SM_Veh_4x4_Car_Wheel_fl_01
+      SM_Veh_4x4_Car_Wheel_fr_01
+      SM_Veh_4x4_Car_Wheel_rl_01
+      SM_Veh_4x4_Car_Wheel_rr_01   
+    View
+      Jeep03Camera
+  Jeep04
+    SM_Veh_4x4_Car_Door_L_01
+    SM_Veh_4x4_Car_Door_R_01
+    SM_Veh_4x4_Car_Glass_01
+    SM_Veh_4x4_Car_Rear_Door_01
+    SM_Veh_4x4_Car_Rear_Seat_01
+    SM_Veh_4x4_Car_SteeringW_01
+    WheelMeshes
+      SM_Veh_4x4_Car_Wheel_fl_01
+      SM_Veh_4x4_Car_Wheel_fr_01
+      SM_Veh_4x4_Car_Wheel_rl_01
+      SM_Veh_4x4_Car_Wheel_rr_01    
+    WheelColliders
+      SM_Veh_4x4_Car_Wheel_fl_01
+      SM_Veh_4x4_Car_Wheel_fr_01
+      SM_Veh_4x4_Car_Wheel_rl_01
+      SM_Veh_4x4_Car_Wheel_rr_01   
+    View
+      Jeep04Camera      
+Interface
+  Canvas
+    Compass
+      Compass_DegreeText
+      Compass_Background
+      Compass_Foreground
+    VehiclesSpeed
+      Jeep01Speedometer
+        Jeep01_SpeedoGuage
+        Jeep01_SpeedoNeedle
+        Jeep01_SpeedText
+      Jeep02Speedometer
+        Jeep02_SpeedoGuage
+        Jeep02_SpeedoNeedle
+        Jeep02_SpeedText
+      Jeep03Speedometer
+        Jeep03_SpeedoGuage
+        Jeep03_SpeedoNeedle
+        Jeep03_SpeedText         
+    VehiclesEntry
+      Jeep01_EntryKey    
+      Jeep02_EntryKey
+      Jeep03_EntryKey
+      Jeep04_EntryKey             
+EventSystem
+
+
+-----------------------------------------------------------------------------------
+
+Notes: Current Summary
+
+-----------------------------------------------------------------------------------
+
+
+Note: Ok, by now your heirarchy should look like this:
+
+Mostly Collapsed:
+
+
+Environment
+  Directional Light
+  Terrain
+  Terrain Plane
+Player
+  View
+    Camera
+Vehicles
+  Jeep01
+    SM_Veh_4x4_Car_Door_L_01
+    SM_Veh_4x4_Car_Door_R_01
+    SM_Veh_4x4_Car_Glass_01
+    SM_Veh_4x4_Car_Rear_Door_01
+    SM_Veh_4x4_Car_Rear_Seat_01
+    SM_Veh_4x4_Car_SteeringW_01
+    WheelMeshes
+    WheelColliders   
+    View
+  Jeep02
+    SM_Veh_4x4_Car_Door_L_01
+    SM_Veh_4x4_Car_Door_R_01
+    SM_Veh_4x4_Car_Glass_01
+    SM_Veh_4x4_Car_Rear_Door_01
+    SM_Veh_4x4_Car_Rear_Seat_01
+    SM_Veh_4x4_Car_SteeringW_01
+    WheelMeshes
+    WheelColliders   
+    View
+  Jeep03
+    SM_Veh_4x4_Car_Door_L_01
+    SM_Veh_4x4_Car_Door_R_01
+    SM_Veh_4x4_Car_Glass_01
+    SM_Veh_4x4_Car_Rear_Door_01
+    SM_Veh_4x4_Car_Rear_Seat_01
+    SM_Veh_4x4_Car_SteeringW_01
+    WheelMeshes
+    WheelColliders   
+    View
+  Jeep04
+    SM_Veh_4x4_Car_Door_L_01
+    SM_Veh_4x4_Car_Door_R_01
+    SM_Veh_4x4_Car_Glass_01
+    SM_Veh_4x4_Car_Rear_Door_01
+    SM_Veh_4x4_Car_Rear_Seat_01
+    SM_Veh_4x4_Car_SteeringW_01
+    WheelMeshes
+    WheelColliders   
+    View    
+Interface
+  Canvas
+    Compass
+    VehiclesSpeed
+    VehiclesEntry
+EventSystem
+
+Fully Expanded:
+
+Environment
+  Directional Light
+  Terrain
+  Terrain Plane
+Player
+  View
+    Camera
+Vehicles
+  Jeep01
+    SM_Veh_4x4_Car_Door_L_01
+    SM_Veh_4x4_Car_Door_R_01
+    SM_Veh_4x4_Car_Glass_01
+    SM_Veh_4x4_Car_Rear_Door_01
+    SM_Veh_4x4_Car_Rear_Seat_01
+    SM_Veh_4x4_Car_SteeringW_01
+    WheelMeshes
+      SM_Veh_4x4_Car_Wheel_fl_01
+      SM_Veh_4x4_Car_Wheel_fr_01
+      SM_Veh_4x4_Car_Wheel_rl_01
+      SM_Veh_4x4_Car_Wheel_rr_01    
+    WheelColliders
+      SM_Veh_4x4_Car_Wheel_fl_01
+      SM_Veh_4x4_Car_Wheel_fr_01
+      SM_Veh_4x4_Car_Wheel_rl_01
+      SM_Veh_4x4_Car_Wheel_rr_01   
+    View
+      Jeep01Camera
+  Jeep02
+    SM_Veh_4x4_Car_Door_L_01
+    SM_Veh_4x4_Car_Door_R_01
+    SM_Veh_4x4_Car_Glass_01
+    SM_Veh_4x4_Car_Rear_Door_01
+    SM_Veh_4x4_Car_Rear_Seat_01
+    SM_Veh_4x4_Car_SteeringW_01
+    WheelMeshes
+      SM_Veh_4x4_Car_Wheel_fl_01
+      SM_Veh_4x4_Car_Wheel_fr_01
+      SM_Veh_4x4_Car_Wheel_rl_01
+      SM_Veh_4x4_Car_Wheel_rr_01    
+    WheelColliders
+      SM_Veh_4x4_Car_Wheel_fl_01
+      SM_Veh_4x4_Car_Wheel_fr_01
+      SM_Veh_4x4_Car_Wheel_rl_01
+      SM_Veh_4x4_Car_Wheel_rr_01   
+    View
+      Jeep02Camera
+  Jeep03
+    SM_Veh_4x4_Car_Door_L_01
+    SM_Veh_4x4_Car_Door_R_01
+    SM_Veh_4x4_Car_Glass_01
+    SM_Veh_4x4_Car_Rear_Door_01
+    SM_Veh_4x4_Car_Rear_Seat_01
+    SM_Veh_4x4_Car_SteeringW_01
+    WheelMeshes
+      SM_Veh_4x4_Car_Wheel_fl_01
+      SM_Veh_4x4_Car_Wheel_fr_01
+      SM_Veh_4x4_Car_Wheel_rl_01
+      SM_Veh_4x4_Car_Wheel_rr_01    
+    WheelColliders
+      SM_Veh_4x4_Car_Wheel_fl_01
+      SM_Veh_4x4_Car_Wheel_fr_01
+      SM_Veh_4x4_Car_Wheel_rl_01
+      SM_Veh_4x4_Car_Wheel_rr_01   
+    View
+      Jeep03Camera
+  Jeep04
+    SM_Veh_4x4_Car_Door_L_01
+    SM_Veh_4x4_Car_Door_R_01
+    SM_Veh_4x4_Car_Glass_01
+    SM_Veh_4x4_Car_Rear_Door_01
+    SM_Veh_4x4_Car_Rear_Seat_01
+    SM_Veh_4x4_Car_SteeringW_01
+    WheelMeshes
+      SM_Veh_4x4_Car_Wheel_fl_01
+      SM_Veh_4x4_Car_Wheel_fr_01
+      SM_Veh_4x4_Car_Wheel_rl_01
+      SM_Veh_4x4_Car_Wheel_rr_01    
+    WheelColliders
+      SM_Veh_4x4_Car_Wheel_fl_01
+      SM_Veh_4x4_Car_Wheel_fr_01
+      SM_Veh_4x4_Car_Wheel_rl_01
+      SM_Veh_4x4_Car_Wheel_rr_01   
+    View
+      Jeep04Camera
+Interface
+  Canvas
+    Compass
+      Compass_DegreeText
+      Compass_Background
+      Compass_Foreground
+    VehiclesSpeed
+      Jeep01Speedometer
+        Jeep01_SpeedoGuage
+        Jeep01_SpeedoNeedle
+        Jeep01_SpeedText
+      Jeep02Speedometer
+        Jeep02_SpeedoGuage
+        Jeep02_SpeedoNeedle
+        Jeep02_SpeedText
+      Jeep03Speedometer
+        Jeep03_SpeedoGuage
+        Jeep03_SpeedoNeedle
+        Jeep03_SpeedText        
+    VehiclesEntry
+      Jeep01_EntryKey    
+      Jeep02_EntryKey
+      Jeep03_EntryKey
+      Jeep04_EntryKey            
+EventSystem
+
+
+-----------------------------------------------------------------------------------
+
+Step 82: Add to: Jeep04 (Jeep04Entry.cs)
+
+-----------------------------------------------------------------------------------
+
+
+Attach component / script (Jeep04Entry.cs) to "Jeep04"
+
+Adjust the following settings:
+
+
+Game Objects:
+-------------
+
+Jeep04: Jeep04
+Player: Player
+InterfaceText Object: Jeep04_EntryKey
+
+
+In Box Collider:
+----------------
+
+Is Trigger: Yes
+
+Edit Collider: YES!* 
+
+* Edit the collider to be around the vehicle doors makings sure to extend the
+  collider a good bit out away from doors so as to allow for a good trigger
+  zone. Here is just an example that I suggest you tweak further to your
+  likings and needs:
+
+Center: X: 0.05843675 Y: 1.107235 Z: -0.05913931
+Size: X: 3.934733 Y: 1.711891 Z: 0.9941341
+
+
+Input Actions:
+--------------
+
+Car Controls: CarControls (Input Action Asset)
+
+
+-----------------------------------------------------------------------------------
+
+Step 83: In "VehiclesSpeed" create empty child: "Jeep04Speedometer"
+
+-----------------------------------------------------------------------------------
+
+
+In "Jeep04Speedometer"
+
+Adjust:
+
+Rect Transform:
+---------------
+
+Middle Center
+
+Width: 300
+Height: 300
+
+* something to note on placement: ok, when you add the script later in steps
+  you will notice an option in script settings for setting on choice of
+  either kph or mph in regards to SpeedText output, ok, with taking that into
+  account you can now possibly understand the following note about placement
+  of the interface items specific to such, mkay lets say that these setup
+  steps suggest setting all on the bottom left and that is because we are
+  using mph for the speed text output display thus such would make sense to
+  have speedometer and speed text on left bottom, but, ok, say you select kph
+  as speed text output, then it just might make sence to set the interface
+  items to the bottom right and that is why these suggestions are mentioned.
+  The choice is yours on that.
+
+
+-----------------------------------------------------------------------------------
+
+Step 84: In Interface > Canvas > VehiclesSpeed add UI IMG: "Jeep04_SpeedoGuage"
+
+-----------------------------------------------------------------------------------
+
+
+In: "Jeep04_SpeedoGuage"
+
+Adjust:
+
+Rect Transform:
+---------------
+
+Middle Center
+
+Width: 300
+Height: 300
+
+
+In: "Image"
+
+
+Source Image: Speedometer-Guage
+
+Color: (Suggested Hex) FFFFFF
+
+
+Note: Lastly, disable this object as we do not want this to display prior to
+awake or start methods and to do this we will disable this object by default
+and then there is a wrapper in the script that will find the inactive item in
+start thus doing what will be needed. So yeah, make sure to disable this
+object in the editor.
+
+
+-----------------------------------------------------------------------------------
+
+Step 85: In Interface > Canvas > VehiclesSpeed add IMG: "Jeep04_SpeedoNeedle"
+
+-----------------------------------------------------------------------------------
+
+
+In: "Jeep04_SpeedoNeedle"
+
+Adjust:
+
+Rect Transform:
+---------------
+
+Middle Center
+
+Pos Y: -24
+
+Width: 260
+Height: 260
+
+
+In: "Image"
+
+
+Source Image: Speedometer-Needle
+
+Color: (Suggested Hex) 6B3232
+
+
+Note: Lastly, disable this object as we do not want this to display prior to
+awake or start methods and to do this we will disable this object by default
+and then there is a wrapper in the script that will find the inactive item in
+start thus doing what will be needed. So yeah, make sure to disable this
+object in the editor.
+
+
+-----------------------------------------------------------------------------------
+
+Step 86: In Interface > Canvas > VehiclesSpeed add TMP TEXT: "Jeep04_SpeedText"
+
+-----------------------------------------------------------------------------------
+
+
+In: "Jeep04_SpeedText"
+
+Adjust:
+
+Rect Transform:
+---------------
+
+Middle Center
+
+Pos Y: -120.4
+
+Width: 200
+Height: 50
+
+Text Input:
+-----------
+
+0 mph
+
+
+Font Size: 36 *
+
+Vertex Color: (Suggested Hex) FFFFFF
+
+Alignment: Center Middle
+
+Face:
+Dilate: 0.21 *
+
+Outline: YES
+Thickness: 0.121 *
+
+Underlay: YES
+Dilate: 0.02 *
+Softness: 0.522 *
+
+* Note these are just suggestions for you then to tweak and adjust further to
+  your likings.
+
+
+Note: Lastly, disable this object as we do not want this to display prior to
+awake or start methods and to do this we will disable this object by default
+and then there is a wrapper in the script that will find the inactive item in
+start thus doing what will be needed. So yeah, make sure to disable this
+object in the editor.
+
+
+-----------------------------------------------------------------------------------
+
+Step 87: In Vehicles > Jeep04 attach script: (Jeep04Speedometer.cs)
+
+-----------------------------------------------------------------------------------
+
+
+Attach Jeep04Speedometer script: (Jeep04Speedometer.cs) to
+Vehicle: "Jeep04"
+
+In: "Jeep04" > Jeep04 Speedometer (Script)
+
+Adjust the minimal settings as far as what is min needed: (Needle IMG and
+Speed Text)
+
+Needle: Jeep04_SpeedoNeedle
+
+Speed Text: Jeep04_SpeedText (Text Mesh Pro UGUI)
+
+GameObjects:
+
+Interface Parent Object: Jeep04Speedometer
+Interface IMG01 Object: Jeep04_SpeedoGuage
+Interface IMG02 Object: Jeep04_SpeedoNeedle
+Interface Text Object: Jeep04_SpeedText
+
+
+Input Actions:
+--------------
+
+Car Controls: CarControls (Input Action Asset)
+
+
+-----------------------------------------------------------------------------------
+
+
+Note: Lastly, in case you missed this notice previously, we need to disable
+the listed objects found below as we do not want these objects to display
+prior to awake or start methods and to do this we will disable this object by
+default and then there is a wrapper in the script that will find the inactive
+item in start thus doing what will be needed. So yeah, make sure to disable
+this object in the editor.
+
+Game Objects:
+
+Jeep04Speedometer
+Jeep04_SpeedoGuage
+Jeep04_SpeedoNeedle
+Jeep04_SpeedText
+
+
+-----------------------------------------------------------------------------------
+
+Notes: Current Summary
+
+-----------------------------------------------------------------------------------
+
+
+Note: Ok, by now your heirarchy should look like this:
+
+Mostly Collapsed:
+
+
+Environment
+  Directional Light
+  Terrain
+  Terrain Plane
+Player
+  View
+    Camera
+Vehicles
+  Jeep01
+    SM_Veh_4x4_Car_Door_L_01
+    SM_Veh_4x4_Car_Door_R_01
+    SM_Veh_4x4_Car_Glass_01
+    SM_Veh_4x4_Car_Rear_Door_01
+    SM_Veh_4x4_Car_Rear_Seat_01
+    SM_Veh_4x4_Car_SteeringW_01
+    WheelMeshes
+    WheelColliders   
+    View
+  Jeep02
+    SM_Veh_4x4_Car_Door_L_01
+    SM_Veh_4x4_Car_Door_R_01
+    SM_Veh_4x4_Car_Glass_01
+    SM_Veh_4x4_Car_Rear_Door_01
+    SM_Veh_4x4_Car_Rear_Seat_01
+    SM_Veh_4x4_Car_SteeringW_01
+    WheelMeshes
+    WheelColliders   
+    View
+  Jeep03
+    SM_Veh_4x4_Car_Door_L_01
+    SM_Veh_4x4_Car_Door_R_01
+    SM_Veh_4x4_Car_Glass_01
+    SM_Veh_4x4_Car_Rear_Door_01
+    SM_Veh_4x4_Car_Rear_Seat_01
+    SM_Veh_4x4_Car_SteeringW_01
+    WheelMeshes
+    WheelColliders   
+    View
+  Jeep04
+    SM_Veh_4x4_Car_Door_L_01
+    SM_Veh_4x4_Car_Door_R_01
+    SM_Veh_4x4_Car_Glass_01
+    SM_Veh_4x4_Car_Rear_Door_01
+    SM_Veh_4x4_Car_Rear_Seat_01
+    SM_Veh_4x4_Car_SteeringW_01
+    WheelMeshes
+    WheelColliders   
+    View    
+Interface
+  Canvas
+    Compass
+    VehiclesSpeed
+    VehiclesEntry
+EventSystem
+
+Fully Expanded:
+
+Environment
+  Directional Light
+  Terrain
+  Terrain Plane
+Player
+  View
+    Camera
+Vehicles
+  Jeep01
+    SM_Veh_4x4_Car_Door_L_01
+    SM_Veh_4x4_Car_Door_R_01
+    SM_Veh_4x4_Car_Glass_01
+    SM_Veh_4x4_Car_Rear_Door_01
+    SM_Veh_4x4_Car_Rear_Seat_01
+    SM_Veh_4x4_Car_SteeringW_01
+    WheelMeshes
+      SM_Veh_4x4_Car_Wheel_fl_01
+      SM_Veh_4x4_Car_Wheel_fr_01
+      SM_Veh_4x4_Car_Wheel_rl_01
+      SM_Veh_4x4_Car_Wheel_rr_01    
+    WheelColliders
+      SM_Veh_4x4_Car_Wheel_fl_01
+      SM_Veh_4x4_Car_Wheel_fr_01
+      SM_Veh_4x4_Car_Wheel_rl_01
+      SM_Veh_4x4_Car_Wheel_rr_01   
+    View
+      Jeep01Camera
+  Jeep02
+    SM_Veh_4x4_Car_Door_L_01
+    SM_Veh_4x4_Car_Door_R_01
+    SM_Veh_4x4_Car_Glass_01
+    SM_Veh_4x4_Car_Rear_Door_01
+    SM_Veh_4x4_Car_Rear_Seat_01
+    SM_Veh_4x4_Car_SteeringW_01
+    WheelMeshes
+      SM_Veh_4x4_Car_Wheel_fl_01
+      SM_Veh_4x4_Car_Wheel_fr_01
+      SM_Veh_4x4_Car_Wheel_rl_01
+      SM_Veh_4x4_Car_Wheel_rr_01    
+    WheelColliders
+      SM_Veh_4x4_Car_Wheel_fl_01
+      SM_Veh_4x4_Car_Wheel_fr_01
+      SM_Veh_4x4_Car_Wheel_rl_01
+      SM_Veh_4x4_Car_Wheel_rr_01   
+    View
+      Jeep02Camera
+  Jeep03
+    SM_Veh_4x4_Car_Door_L_01
+    SM_Veh_4x4_Car_Door_R_01
+    SM_Veh_4x4_Car_Glass_01
+    SM_Veh_4x4_Car_Rear_Door_01
+    SM_Veh_4x4_Car_Rear_Seat_01
+    SM_Veh_4x4_Car_SteeringW_01
+    WheelMeshes
+      SM_Veh_4x4_Car_Wheel_fl_01
+      SM_Veh_4x4_Car_Wheel_fr_01
+      SM_Veh_4x4_Car_Wheel_rl_01
+      SM_Veh_4x4_Car_Wheel_rr_01    
+    WheelColliders
+      SM_Veh_4x4_Car_Wheel_fl_01
+      SM_Veh_4x4_Car_Wheel_fr_01
+      SM_Veh_4x4_Car_Wheel_rl_01
+      SM_Veh_4x4_Car_Wheel_rr_01   
+    View
+      Jeep03Camera
+  Jeep04
+    SM_Veh_4x4_Car_Door_L_01
+    SM_Veh_4x4_Car_Door_R_01
+    SM_Veh_4x4_Car_Glass_01
+    SM_Veh_4x4_Car_Rear_Door_01
+    SM_Veh_4x4_Car_Rear_Seat_01
+    SM_Veh_4x4_Car_SteeringW_01
+    WheelMeshes
+      SM_Veh_4x4_Car_Wheel_fl_01
+      SM_Veh_4x4_Car_Wheel_fr_01
+      SM_Veh_4x4_Car_Wheel_rl_01
+      SM_Veh_4x4_Car_Wheel_rr_01    
+    WheelColliders
+      SM_Veh_4x4_Car_Wheel_fl_01
+      SM_Veh_4x4_Car_Wheel_fr_01
+      SM_Veh_4x4_Car_Wheel_rl_01
+      SM_Veh_4x4_Car_Wheel_rr_01   
+    View
+      Jeep04Camera
+Interface
+  Canvas
+    Compass
+      Compass_DegreeText
+      Compass_Background
+      Compass_Foreground  
+    VehiclesSpeed
+      Jeep01Speedometer
+        Jeep01_SpeedoGuage
+        Jeep01_SpeedoNeedle
+        Jeep01_SpeedText
+      Jeep02Speedometer
+        Jeep02_SpeedoGuage
+        Jeep02_SpeedoNeedle
+        Jeep02_SpeedText
+      Jeep03Speedometer
+        Jeep03_SpeedoGuage
+        Jeep03_SpeedoNeedle
+        Jeep03_SpeedText
+      Jeep04Speedometer
+        Jeep04_SpeedoGuage
+        Jeep04_SpeedoNeedle
+        Jeep04_SpeedText
+    VehiclesEntry
+      Jeep01_EntryKey
+      Jeep02_EntryKey
+      Jeep03_EntryKey
+      Jeep04_EntryKey                  
+EventSystem
+
+
+-----------------------------------------------------------------------------------
+
+
+NEXT: We add the fourth vehicle compass
+
+
+------------------------------------------------------------------------------------
+
+Step 88: Add: Component / Script: Jeep04Compass.cs
+
+------------------------------------------------------------------------------------
+
+
+88.A) Go back to: Interface -> Canvas -> Compass
+     
+     Add component / script: "Jeep04Compass.cs"
+
+88.B) Ok, now fill out the related settings:
+
+For -> Jeep04Compass (Script):
+---------------------------------------
+
+Script: Jeep04Compass.cs
+Compass Foreground: Compass_Foreground (Raw Image)
+Compass Background: Compass_Background (Raw Image)
+Jeep04: Jeep04 (Transform)
+Compass Direction: Compass_DegreeText (Text Mesh Pro)
+Compass Enabled: Uncheck this 
+
+
+------------------------------------------------------------------------------------
+
+Step 89: Edit Settings in: Jeep04Entry (Script)
+
+------------------------------------------------------------------------------------
+
+
+Compass
+-------
+
+Player Compass: Compass (Player Compass)
+Jeep 04 Compass: Compass (Jeep 04 Compass)
+
+
+----------------------------------------------------------------------------------------
+
+
+FINAL NOTE: In your vehicle camera (script) you may need or opt or
+not to adjust some settings to suit your likings more say things like for
+example: Distance, height, field of view, etc, etc... This is entirely up to
+you if you desire to do such or not...
+
+
+-----------------------------------------------------------------------------------
+
+Notes: Current Summary
+
+-----------------------------------------------------------------------------------
+
+
+Note: Ok, by now your heirarchy should look like this:
+
+Mostly Collapsed:
+
+
+Environment
+  Directional Light
+  Terrain
+  Terrain Plane
+Player
+  View
+    Camera
+Vehicles
+  Jeep01
+    SM_Veh_4x4_Car_Door_L_01
+    SM_Veh_4x4_Car_Door_R_01
+    SM_Veh_4x4_Car_Glass_01
+    SM_Veh_4x4_Car_Rear_Door_01
+    SM_Veh_4x4_Car_Rear_Seat_01
+    SM_Veh_4x4_Car_SteeringW_01
+    WheelMeshes
+    WheelColliders   
+    View
+  Jeep02
+    SM_Veh_4x4_Car_Door_L_01
+    SM_Veh_4x4_Car_Door_R_01
+    SM_Veh_4x4_Car_Glass_01
+    SM_Veh_4x4_Car_Rear_Door_01
+    SM_Veh_4x4_Car_Rear_Seat_01
+    SM_Veh_4x4_Car_SteeringW_01
+    WheelMeshes
+    WheelColliders   
+    View
+  Jeep03
+    SM_Veh_4x4_Car_Door_L_01
+    SM_Veh_4x4_Car_Door_R_01
+    SM_Veh_4x4_Car_Glass_01
+    SM_Veh_4x4_Car_Rear_Door_01
+    SM_Veh_4x4_Car_Rear_Seat_01
+    SM_Veh_4x4_Car_SteeringW_01
+    WheelMeshes
+    WheelColliders   
+    View
+  Jeep04
+    SM_Veh_4x4_Car_Door_L_01
+    SM_Veh_4x4_Car_Door_R_01
+    SM_Veh_4x4_Car_Glass_01
+    SM_Veh_4x4_Car_Rear_Door_01
+    SM_Veh_4x4_Car_Rear_Seat_01
+    SM_Veh_4x4_Car_SteeringW_01
+    WheelMeshes
+    WheelColliders   
+    View    
+Interface
+  Canvas
+    Compass
+    VehiclesSpeed
+    VehiclesEntry
+EventSystem
+
+Fully Expanded:
+
+Environment
+  Directional Light
+  Terrain
+  Terrain Plane
+Player
+  View
+    Camera
+Vehicles
+  Jeep01
+    SM_Veh_4x4_Car_Door_L_01
+    SM_Veh_4x4_Car_Door_R_01
+    SM_Veh_4x4_Car_Glass_01
+    SM_Veh_4x4_Car_Rear_Door_01
+    SM_Veh_4x4_Car_Rear_Seat_01
+    SM_Veh_4x4_Car_SteeringW_01
+    WheelMeshes
+      SM_Veh_4x4_Car_Wheel_fl_01
+      SM_Veh_4x4_Car_Wheel_fr_01
+      SM_Veh_4x4_Car_Wheel_rl_01
+      SM_Veh_4x4_Car_Wheel_rr_01    
+    WheelColliders
+      SM_Veh_4x4_Car_Wheel_fl_01
+      SM_Veh_4x4_Car_Wheel_fr_01
+      SM_Veh_4x4_Car_Wheel_rl_01
+      SM_Veh_4x4_Car_Wheel_rr_01   
+    View
+      Jeep01Camera
+  Jeep02
+    SM_Veh_4x4_Car_Door_L_01
+    SM_Veh_4x4_Car_Door_R_01
+    SM_Veh_4x4_Car_Glass_01
+    SM_Veh_4x4_Car_Rear_Door_01
+    SM_Veh_4x4_Car_Rear_Seat_01
+    SM_Veh_4x4_Car_SteeringW_01
+    WheelMeshes
+      SM_Veh_4x4_Car_Wheel_fl_01
+      SM_Veh_4x4_Car_Wheel_fr_01
+      SM_Veh_4x4_Car_Wheel_rl_01
+      SM_Veh_4x4_Car_Wheel_rr_01    
+    WheelColliders
+      SM_Veh_4x4_Car_Wheel_fl_01
+      SM_Veh_4x4_Car_Wheel_fr_01
+      SM_Veh_4x4_Car_Wheel_rl_01
+      SM_Veh_4x4_Car_Wheel_rr_01   
+    View
+      Jeep02Camera
+  Jeep03
+    SM_Veh_4x4_Car_Door_L_01
+    SM_Veh_4x4_Car_Door_R_01
+    SM_Veh_4x4_Car_Glass_01
+    SM_Veh_4x4_Car_Rear_Door_01
+    SM_Veh_4x4_Car_Rear_Seat_01
+    SM_Veh_4x4_Car_SteeringW_01
+    WheelMeshes
+      SM_Veh_4x4_Car_Wheel_fl_01
+      SM_Veh_4x4_Car_Wheel_fr_01
+      SM_Veh_4x4_Car_Wheel_rl_01
+      SM_Veh_4x4_Car_Wheel_rr_01    
+    WheelColliders
+      SM_Veh_4x4_Car_Wheel_fl_01
+      SM_Veh_4x4_Car_Wheel_fr_01
+      SM_Veh_4x4_Car_Wheel_rl_01
+      SM_Veh_4x4_Car_Wheel_rr_01   
+    View
+      Jeep03Camera
+  Jeep04
+    SM_Veh_4x4_Car_Door_L_01
+    SM_Veh_4x4_Car_Door_R_01
+    SM_Veh_4x4_Car_Glass_01
+    SM_Veh_4x4_Car_Rear_Door_01
+    SM_Veh_4x4_Car_Rear_Seat_01
+    SM_Veh_4x4_Car_SteeringW_01
+    WheelMeshes
+      SM_Veh_4x4_Car_Wheel_fl_01
+      SM_Veh_4x4_Car_Wheel_fr_01
+      SM_Veh_4x4_Car_Wheel_rl_01
+      SM_Veh_4x4_Car_Wheel_rr_01    
+    WheelColliders
+      SM_Veh_4x4_Car_Wheel_fl_01
+      SM_Veh_4x4_Car_Wheel_fr_01
+      SM_Veh_4x4_Car_Wheel_rl_01
+      SM_Veh_4x4_Car_Wheel_rr_01   
+    View
+      Jeep04Camera
+Interface
+  Canvas
+    Compass
+      Compass_DegreeText
+      Compass_Background
+      Compass_Foreground  
+    VehiclesSpeed
+      Jeep01Speedometer
+        Jeep01_SpeedoGuage
+        Jeep01_SpeedoNeedle
+        Jeep01_SpeedText
+      Jeep02Speedometer
+        Jeep02_SpeedoGuage
+        Jeep02_SpeedoNeedle
+        Jeep02_SpeedText
+      Jeep03Speedometer
+        Jeep03_SpeedoGuage
+        Jeep03_SpeedoNeedle
+        Jeep03_SpeedText
+      Jeep04Speedometer
+        Jeep04_SpeedoGuage
+        Jeep04_SpeedoNeedle
+        Jeep04_SpeedText
+    VehiclesEntry
+      Jeep01_EntryKey
+      Jeep02_EntryKey
+      Jeep03_EntryKey
+      Jeep04_EntryKey                  
+EventSystem
+
+
+-----------------------------------------------------------------------------------
+
+
+That should about sum it up and should be about it and concludes the basic All
+Vehicle Controller(s) with entry in scene manual setup steps.
+You can now begin to modify such further for your specific needs.
+
+Best of Luck!
