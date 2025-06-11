@@ -234,7 +234,7 @@ Compass
 -------
 
 Player Compass: Compass (Player Compass)
-Charger 01 Compass: Compass (Police Charger 01 Compass)
+Jeep 04 Compass: Compass (Jeep 04 Compass)
 
 
 ------------------------------------------------------------------------------------

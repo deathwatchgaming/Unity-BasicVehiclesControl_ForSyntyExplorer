@@ -194,7 +194,7 @@ For -> Jeep01Compass (Script):
 Script: Jeep01Compass.cs
 Compass Foreground: Compass_Foreground (Raw Image)
 Compass Background: Compass_Background (Raw Image)
-Charger 01: Jeep01 (Transform)
+Jeep 01: Jeep01 (Transform)
 Compass Direction: Compass_DegreeText (Text Mesh Pro)
 Compass Enabled: Check this 
 
